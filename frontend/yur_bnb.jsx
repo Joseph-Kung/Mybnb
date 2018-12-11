@@ -5,7 +5,7 @@ import Root from './components/root';
 
 
 //TEST
-import { signup, login, logout } from './util/session_api_util';
+import { signup, login, logout } from './actions/sessions/session_actions';
 //TEST
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.store = store
   //TEST
-  
+
   ReactDOM.render(<Root store={store} />, root)
 })

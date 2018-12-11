@@ -1,16 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const NavBar = (props) => {
   const contents = () => {
-    debugger
       if (props.currentUser === undefined) {
       return (
         <div>
-          <button className='nav-bar-button' onClick={props.login}>Login</button>
-          <button className='nav-bar-button' onClick={props.signup}>Sign up</button>
+          <Link to='/signup'><button className='nav-bar-button'>Sign up</button></Link>
+          <Link to='/login'><button className='nav-bar-button'>Log in</button></Link>
         </div>
       )}else {
-      return <button className='nav-bar-button' onClick={props.logout}>Logout</button>
+      return <button className='nav-bar-button' onClick={props.logout}>Log out</button>
       }
     }
 

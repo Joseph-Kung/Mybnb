@@ -19,7 +19,7 @@
 }
 
 .logo {
-  background-image: url(airbnb-logo.png);
+  background-image: img_url(airbnb-logo.png);
   background-size: contain;
   width: 50px;
   height: 54px;
@@ -29,14 +29,14 @@
 }
 
 .linkedin {
-  background-image: url(linkedin.png);
+  background-image: img_url(linkedin.png);
   background-size: cover;
   padding: 17px;
   margin: 24px 30px;
 }
 
 .github {
-  background-image: url(github.png);
+  background-image: img_url(github.png);
   background-size: cover;
   padding: 18px;
   margin: 22px 30px

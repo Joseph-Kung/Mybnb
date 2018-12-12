@@ -12,9 +12,16 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.processForm(this.state);
+  handleSubmit(type) {
+
+    return (e) => {
+      e.preventDefault();
+      if (type === 'guest') {
+        this.props.loginGuest();
+      } else {
+        this.props.processForm(this.state);
+      }
+    }
   }
 
   handleChange(type) {
@@ -83,6 +90,8 @@ class SessionForm extends React.Component {
     }
   }
 
+
+
   render() {
     const errors = this.props.errors.map(error => <li className='session-error' key={error}>{error}</li>)
     return (
@@ -95,10 +104,10 @@ class SessionForm extends React.Component {
         <form className='parent-session-form-fields'>
           {this.renderFields()}
           <div>
-            <button className='form-submit' onClick={this.handleSubmit}>Submit</button>
+            <button className='form-submit' onClick={this.handleSubmit('new')}>Submit</button>
           </div>
           <div>
-            <button className='form-submit'type="input" onClick={this.props.loginGuest}>Demo User</button>
+            <button className='form-submit' onClick={this.handleSubmit('guest')}>Demo User</button>
           </div>
           <div>
             <ul className='errors-container'>

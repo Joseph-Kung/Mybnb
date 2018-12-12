@@ -34,7 +34,8 @@
     "eslint-plugin-react": "^7.11.1"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "webpack --mode=development --start"
   },
   "repository": {
     "type": "git",

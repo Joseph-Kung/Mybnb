@@ -44,12 +44,15 @@ class SessionForm extends React.Component {
             <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
           </label>
           <label>
+            <i className="far fa-user"></i>
             <input placeholder='First Name' type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
           </label>
           <label>
+            <i className="far fa-user"></i>
             <input placeholder='Last Name' type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
           </label>
           <label>
+            <i className="fas fa-key"></i>
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')}/>
           </label>
         </div>
@@ -62,6 +65,7 @@ class SessionForm extends React.Component {
             <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')} />
           </label>
           <label>
+            <i className="fas fa-key"></i>
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')} />
           </label>
         </div>
@@ -91,7 +95,7 @@ class SessionForm extends React.Component {
             <input className='form-submit'type="submit" value='Submit'/>
           </div>
           <div>
-            <ul>
+            <ul className='errors-container'>
               {errors}
             </ul>
           </div>

@@ -22,6 +22,10 @@ class SessionForm extends React.Component {
       this.setState({ [type]: e.target.value });
     };
   }
+
+  componentDidUpdate() {
+    this.checkLoggedIn();
+  }
   
   renderOtherForm () {
     if (this.props.formType === 'Sign up') {
@@ -80,7 +84,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    this.checkLoggedIn();
     const errors = this.props.errors.map(error => <li className='session-error' key={error}>{error}</li>)
     return (
       <>
@@ -89,13 +92,13 @@ class SessionForm extends React.Component {
       </div>
       <div className='session-form-container'>
         <h2 className='form-title'>{this.props.formType}</h2>
-        <form className='parent-session-form-fields'onSubmit={this.handleSubmit}>
+        <form className='parent-session-form-fields'>
           {this.renderFields()}
           <div>
-            <input className='form-submit'type="submit" value='Submit'/>
+            <button className='form-submit' onClick={this.handleSubmit}>Submit</button>
           </div>
           <div>
-            <input className='form-submit'type="submit" value='Demo User' onClick={this.props.loginGuest}/>
+            <button className='form-submit'type="input" onClick={this.props.loginGuest}>Demo User</button>
           </div>
           <div>
             <ul className='errors-container'>

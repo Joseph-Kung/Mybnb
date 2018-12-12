@@ -99,6 +99,10 @@
   margin-bottom: 5px;
 }
 
+.form-submit:hover {
+  cursor: pointer;
+}
+
 .parent-session-form-fields div {
   margin: auto;
   width: 80%;

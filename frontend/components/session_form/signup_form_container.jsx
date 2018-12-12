@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
   processForm: user => dispatch(signup(user)),
   clearErrors: () => dispatch(clearErrors()),
   closeModal: () => dispatch(closeModal()),
-  otherForm: <button onClick={() => dispatch(openModal('Log in'))}>Log in</button>
+  otherForm: <button className='other-form-button'onClick={() => dispatch(openModal('Log in'))}>Log in</button>
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);

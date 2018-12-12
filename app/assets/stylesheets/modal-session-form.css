@@ -14,7 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  height: 368px;
+  height: 400px;
   width: 568px;
 }
 
@@ -36,15 +36,22 @@
   width: 100%;
 }
 
-.session-form-fields div input {
+.session-form-fields label input {
   color: #484848;
   border: 1px solid rgb(235, 235, 235);
   font-size: 16px;
   border-radius: 4px;
-  width: 90%;
+  width: 73%;
   padding-top: 11px;
   padding-bottom: 11px;
+  padding-right: 29px;
   padding-left: 5px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.session-form-fields label input:active {
+  border: 1px solid green;
 }
 
 .parent-session-form-fields {
@@ -54,9 +61,9 @@
   justify-content: center;
 }
 
-.session-form-fields div {
-  width: 80%;
-  margin-left: 89px;
+.session-form-fields label {
+  width: 100%;
+  margin-left: 44px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -68,7 +75,7 @@
   align-items: center;
 }
 
-.session-form-container {
+.session-form-container div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,4 +83,36 @@
 
 .form-submit {
   margin: auto;
+  background: rgb(255, 90, 95);
+  border-radius: 4px;
+  border-width: 2px;
+  color: white;
+  width: 366px;
+  text-align: center;
+  padding: 10px 0;
+  border: 5px 0;
+  padding-right: 3px;
+}
+
+.parent-session-form-fields div {
+  margin: auto;
+  width: 80%;
+}
+
+.other-form {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(72, 72, 72);
+  margin-top: 20px;
+}
+
+.other-form-button {
+  margin-left: 10px;
+  color: #008489;
+}
+
+.form-title {
+  margin-bottom: 5px;
 }

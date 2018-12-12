@@ -25,13 +25,13 @@ class SessionForm extends React.Component {
   
   renderOtherForm () {
     if (this.props.formType === 'Sign up') {
-      return (<div>Already have a Yurbnb account? 
+      return (<span className='other-form'>Already have a Yurbnb account? 
               {this.props.otherForm}
-              </div>)
+              </span>)
     } else {
-      return (<div>Don't have a Yurbnb account? 
+      return (<span className='other-form'>Don't have a Yurbnb account? 
             {this.props.otherForm}
-            </div>)
+            </span>)
     }
   }
 
@@ -39,29 +39,31 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'Sign up') {
       return (
         <div className='session-form-fields'>
-          <div>
+          <label>
+            <i className="far fa-envelope"></i>
             <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-          </div>
-          <div>
+          </label>
+          <label>
             <input placeholder='First Name' type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
-          </div>
-          <div>
+          </label>
+          <label>
             <input placeholder='Last Name' type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
-          </div>
-          <div>
+          </label>
+          <label>
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')}/>
-          </div>
+          </label>
         </div>
       );
     } else {
       return (
         <div className='session-form-fields'>
-          <div>
+          <label>
+            <i class="far fa-envelope"></i>
             <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')} />
-          </div>
-          <div>
+          </label>
+          <label>
             <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')} />
-          </div>
+          </label>
         </div>
       );
     }
@@ -75,26 +77,28 @@ class SessionForm extends React.Component {
 
   render() {
     this.checkLoggedIn();
-    const errors = this.props.errors.map(error => <li key={error}>{error}</li>)
+    const errors = this.props.errors.map(error => <li className='session-error' key={error}>{error}</li>)
     return (
       <>
       <div className='session-form-headers'>
         <div className='exit-modal' onClick={this.props.closeModal}>X</div>
       </div>
       <div className='session-form-container'>
-        <h2>{this.props.formType}</h2>
-          <form className='parent-session-form-fields'onSubmit={this.handleSubmit}>
+        <h2 className='form-title'>{this.props.formType}</h2>
+        <form className='parent-session-form-fields'onSubmit={this.handleSubmit}>
           {this.renderFields()}
           <div>
             <input className='form-submit'type="submit" value='Submit'/>
           </div>
           <div>
-            {errors}
+            <ul>
+              {errors}
+            </ul>
           </div>
           <div>
-           {this.renderOtherForm()}
+            {this.renderOtherForm()}
           </div>
-        </form>
+      </form>
       </div>
       </>
     );

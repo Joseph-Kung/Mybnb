@@ -40,3 +40,9 @@ export const logout = () => dispatch => (
     .then(() => dispatch(logoutCurrentUser()),
       errors => dispatch(receiveErrors(errors)))
 );
+
+export const guestLogin = () => dispatch => (
+  sessionAPIUtil.guestLogin()
+    .then(currentUser => dispatch(receiveCurrentUser(currentUser)),
+      errors => dispatch(receiveErrors(errors)))
+);

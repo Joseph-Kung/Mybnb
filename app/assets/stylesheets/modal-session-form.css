@@ -96,6 +96,7 @@
   padding: 10px 0;
   border: 5px 0;
   padding-right: 3px;
+  margin-bottom: 5px;
 }
 
 .parent-session-form-fields div {
@@ -132,4 +133,14 @@
   flex-direction: column;
   align-items: center;
   margin-top: 6px;
+}
+
+.exit-modal {
+  height: 16px;
+  width: 16px;
+  margin-left: 11px;
+  color: rgb(118, 118, 118);
+  text-align: center;
+  font-weight: 300;
+  margin-top: 8px;
 }

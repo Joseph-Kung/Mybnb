@@ -32,3 +32,16 @@ export const logout = () => (
     url: 'api/session',
   })
 );
+
+export const guestLogin = () => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/session',
+    data: {
+      user: {
+        email: 'Guest',
+        password: 'password',
+      },
+    },
+  })
+);

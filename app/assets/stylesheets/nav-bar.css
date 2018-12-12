@@ -20,7 +20,7 @@
 
 .logo {
   background-image: url(airbnb-logo.png);
-  background-size: cover;
+  background-size: contain;
   width: 50px;
   height: 54px;
   margin-left: 10px;

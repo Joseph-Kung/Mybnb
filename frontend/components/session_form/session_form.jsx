@@ -61,7 +61,7 @@ class SessionForm extends React.Component {
       return (
         <div className='session-form-fields'>
           <label>
-            <i class="far fa-envelope"></i>
+            <i className="far fa-envelope"></i>
             <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')} />
           </label>
           <label>
@@ -93,6 +93,9 @@ class SessionForm extends React.Component {
           {this.renderFields()}
           <div>
             <input className='form-submit'type="submit" value='Submit'/>
+          </div>
+          <div>
+            <input className='form-submit'type="submit" value='Demo User' onClick={this.props.loginGuest}/>
           </div>
           <div>
             <ul className='errors-container'>

@@ -18,7 +18,9 @@ const NavBar = (props) => {
       )}else {
       return (
       <div className='nav-bar-container'>
+      <div>
         <Link to='/' className='logo'><div className='logo'></div></Link>
+      </div>
         <button className='nav-bar-button' onClick={props.logout}>Log out</button>
       </div>
       )

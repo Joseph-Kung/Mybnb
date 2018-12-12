@@ -7,8 +7,14 @@ const NavBar = (props) => {
       if (props.currentUser === undefined) {
       return (
         <div className='nav-bar-container'>
-          <div>
-            <Link to='/' className='logo'><div className='logo'></div></Link>
+          <div className='left-nav-bar'>
+            <div>
+              <Link to='/' className='logo'><div className='logo'></div></Link>
+            </div>
+            <div className='search-bar'>
+              <i className="fas fa-search"></i>
+              <input type="text" className='search-bar-input' placeholer='Search' />
+            </div>
           </div>
           <div className='links-container'>
             <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
@@ -20,10 +26,20 @@ const NavBar = (props) => {
       )}else {
       return (
       <div className='nav-bar-container'>
-      <div>
-        <Link to='/' className='logo'><div className='logo'></div></Link>
-      </div>
-        <button className='nav-bar-button' onClick={props.logout}>Log out</button>
+        <div className='left-nav-bar'>
+          <div>
+            <Link to='/' className='logo'><div className='logo'></div></Link>
+          </div>
+          <div className='search-bar'>
+              <i className="fas fa-search"></i>
+            <input type="text" className='search-bar-input' placeholer='Search' />
+          </div>
+        </div>
+        <div className='links-container'>
+          <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
+          <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+          <button className='nav-bar-button' onClick={props.logout}>Log out</button>
+        </div>
       </div>
       )
       }

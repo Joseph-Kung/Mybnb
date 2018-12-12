@@ -31,7 +31,7 @@
   background-image: url(linkedin.png);
   background-size: cover;
   padding: 17px;
-  margin: 23px 30px;
+  margin: 24px 30px;
 }
 
 .github {
@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 500px;
 }
 
 .search-bar {
@@ -67,6 +67,7 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
+  width: 430px;
 }
 
 .search-bar > i {
@@ -78,4 +79,5 @@
 .search-bar-input {
   font-weight: 800;
   font-size: 17px;
+  width: 100%;
 }

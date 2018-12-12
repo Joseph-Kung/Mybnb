@@ -7,7 +7,9 @@ const NavBar = (props) => {
       if (props.currentUser === undefined) {
       return (
         <div className='nav-bar-container'>
-          <Link to='/' className='logo'><img src={'/app/assets/images/airbnb-logo.png'} /></Link>
+          <div>
+            <Link to='/' className='logo'><div className='logo'></div></Link>
+          </div>
           <div>
             {props.loginButton}
             {props.signupButton}
@@ -16,7 +18,7 @@ const NavBar = (props) => {
       )}else {
       return (
       <div className='nav-bar-container'>
-        <Link to='/' className='logo'>Y</Link>
+        <Link to='/' className='logo'><div className='logo'></div></Link>
         <button className='nav-bar-button' onClick={props.logout}>Log out</button>
       </div>
       )

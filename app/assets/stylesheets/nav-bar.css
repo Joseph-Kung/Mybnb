@@ -4,6 +4,8 @@
   border-bottom: 1px solid rgb(228, 228, 228);
   background-color: rgb(255, 255, 255);
   height: 80px;
+  position: fixed;
+  width: 100%;
 }
 
 
@@ -14,4 +16,13 @@
 
 .nav-bar-button:hover {
   border-bottom: 4px solid black;
+}
+
+.logo {
+  background-image: url(airbnb-logo.png);
+  background-size: cover;
+  width: 50px;
+  height: 54px;
+  margin-left: 10px;
+  margin-top: -4px;
 }

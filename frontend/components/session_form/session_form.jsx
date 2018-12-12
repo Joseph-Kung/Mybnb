@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -20,38 +21,61 @@ class SessionForm extends React.Component {
   
   renderOtherForm () {
     if (this.props.formType === 'signup') {
-      return <span>Already have a Yurbnb account? <Link to='/login'>Log in</Link></span>
+      return (<span>Already have a Yurbnb account? 
+              <Link to='/login'>Log in</Link>
+              </span>)
     } else {
-      return <span>Don't have a Yurbnb account? <Link to='/signup'>Sign up</Link></span>
+      return (<span>Don't have a Yurbnb account? 
+            <Link to='/signup'>Sign up</Link>
+            </span>)
     }
   }
 
   renderFields() {
-    if (this.formType === 'signup') {
+    if (this.props.formType === 'signup') {
       return (
-        <input type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-        <input type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
-        <input type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
-        <input type="password" value={this.state.password} onChange={this.handleChange('password')}/>
+        <div>
+          <label>Email: 
+            <input type="text" value={this.state.email} onChange={this.handleChange('email')}/>
+          </label>
+          <label >First Name:
+            <input type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
+          </label>
+          <label>Last Name:
+            <input type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
+          </label>
+          <label>Password: 
+            <input type="password" value={this.state.password} onChange={this.handleChange('password')}/>
+          </label>
+        </div>
       );
     } else {
       return (
-        <input type="text" value={this.state.email} onChange={this.handleChange('email')} />
-        <input type="password" value={this.state.password} onChange={this.handleChange('password')} />
+        <div>
+          <label>Email:
+            <input type="text" value={this.state.email} onChange={this.handleChange('email')} />
+          </label>
+          <label>Password:
+            <input type="password" value={this.state.password} onChange={this.handleChange('password')} />
+          </label>
+        </div>
       );
     }
   }
 
   render() {
-
-    const 
+    const errors = this.props.errors.map(error => <li key={error}>{error}</li>)
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           {this.renderFields()}
           <input type="submit" value='Submit'/>
+          {errors}
+          {this.renderOtherForm()}
         </form>
       </div>
     );
   }
 }
+
+export default SessionForm;

@@ -9,7 +9,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors(); 
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
@@ -66,11 +66,19 @@ class SessionForm extends React.Component {
       );
     }
   }
+  
+  checkLoggedIn() {
+    if (this.props.currentUserId) {
+      this.props.closeModal();
+    }
+  }
 
   render() {
+    this.checkLoggedIn();
     const errors = this.props.errors.map(error => <li key={error}>{error}</li>)
     return (
       <div>
+        <div onClick={this.props.closeModal}>X</div>
         <h2>{this.props.formType}</h2>
         <form onSubmit={this.handleSubmit}>
           {this.renderFields()}

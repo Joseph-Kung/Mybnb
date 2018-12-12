@@ -11,22 +11,32 @@ function Modal({ modal, closeModal }) {
   let component;
   switch(modal) {
     case 'Log in':
-      component = <LoginFormContainer />;
+      component = 'Log in';
       break;
     case 'Sign up':
-      component = <SignupFormContainer />;
+      component = 'Sign up';
       break;
     default:
       return null;
   }
 
-  return (
-    <div className='modal-background' onClick={closeModal}>
-      <div className='modal-child' onClick={e => e.stopPropagation()}>
-        { component }
+  if (component === 'Sign up') {
+    return (
+      <div className='modal-background' onClick={closeModal}>
+        <div className='modal-child-signup' onClick={e => e.stopPropagation()}>
+          <SignupFormContainer />
+        </div>
       </div>
-    </div>
-  )
+    )
+    } else {
+    return (
+      <div className='modal-background' onClick={closeModal}>
+        <div className='modal-child-login' onClick={e => e.stopPropagation()}>
+          <LoginFormContainer />
+        </div>
+      </div>
+    )
+    }
 }
 
 const mapStateToProps = state => ({

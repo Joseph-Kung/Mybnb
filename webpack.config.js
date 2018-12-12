@@ -5,7 +5,8 @@ module.exports = {
   entry: './frontend/yur_bnb.jsx',
   output: {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/app/assets',
   },
   module: {
     rules: [
@@ -15,14 +16,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           query: {
-            presets: ['@babel/env', '@babel/react']
-          }
+            presets: ['@babel/env', '@babel/react'],
+          },
         },
-      }
-    ]
+      },
+    ],
   },
   devtool: 'source-map',
   resolve: {
-    extensions: [".js", ".jsx", "*"]
-  }
+    extensions: ['.js', '.jsx', '*'],
+  },
 };

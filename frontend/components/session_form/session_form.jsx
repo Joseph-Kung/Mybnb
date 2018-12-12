@@ -25,43 +25,43 @@ class SessionForm extends React.Component {
   
   renderOtherForm () {
     if (this.props.formType === 'Sign up') {
-      return (<span>Already have a Yurbnb account? 
+      return (<div>Already have a Yurbnb account? 
               {this.props.otherForm}
-              </span>)
+              </div>)
     } else {
-      return (<span>Don't have a Yurbnb account? 
+      return (<div>Don't have a Yurbnb account? 
             {this.props.otherForm}
-            </span>)
+            </div>)
     }
   }
 
   renderFields() {
     if (this.props.formType === 'Sign up') {
       return (
-        <div>
-          <label>Email: 
-            <input type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-          </label>
-          <label >First Name:
-            <input type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
-          </label>
-          <label>Last Name:
-            <input type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
-          </label>
-          <label>Password: 
-            <input type="password" value={this.state.password} onChange={this.handleChange('password')}/>
-          </label>
+        <div className='session-form-fields'>
+          <div>
+            <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
+          </div>
+          <div>
+            <input placeholder='First Name' type="text" value={this.state.first_name} onChange={this.handleChange('first_name')}/>
+          </div>
+          <div>
+            <input placeholder='Last Name' type="text" value={this.state.last_name} onChange={this.handleChange('last_name')}/>
+          </div>
+          <div>
+            <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')}/>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <label>Email:
-            <input type="text" value={this.state.email} onChange={this.handleChange('email')} />
-          </label>
-          <label>Password:
-            <input type="password" value={this.state.password} onChange={this.handleChange('password')} />
-          </label>
+        <div className='session-form-fields'>
+          <div>
+            <input placeholder='Email' type="text" value={this.state.email} onChange={this.handleChange('email')} />
+          </div>
+          <div>
+            <input placeholder='Password' type="password" value={this.state.password} onChange={this.handleChange('password')} />
+          </div>
         </div>
       );
     }
@@ -77,16 +77,26 @@ class SessionForm extends React.Component {
     this.checkLoggedIn();
     const errors = this.props.errors.map(error => <li key={error}>{error}</li>)
     return (
-      <div>
-        <div onClick={this.props.closeModal}>X</div>
+      <>
+      <div className='session-form-headers'>
+        <div className='exit-modal' onClick={this.props.closeModal}>X</div>
+      </div>
+      <div className='session-form-container'>
         <h2>{this.props.formType}</h2>
-        <form onSubmit={this.handleSubmit}>
+          <form className='parent-session-form-fields'onSubmit={this.handleSubmit}>
           {this.renderFields()}
-          <input type="submit" value='Submit'/>
-          {errors}
-          {this.renderOtherForm()}
+          <div>
+            <input className='form-submit'type="submit" value='Submit'/>
+          </div>
+          <div>
+            {errors}
+          </div>
+          <div>
+           {this.renderOtherForm()}
+          </div>
         </form>
       </div>
+      </>
     );
   }
 }

@@ -10,7 +10,6 @@ const App = () => (
   <div>
     <Modal />
     <header>
-    <h1>YurBnb</h1>
     <NavBarContainer />
     </header>
   </div>

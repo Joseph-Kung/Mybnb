@@ -1,0 +1,17 @@
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+}
+
+
+.nav-bar-button {
+  padding: 30px;
+  font-weight: 600px;
+}
+
+.nav-bar-button:hover {
+  border-bottom: 4px solid black;
+}

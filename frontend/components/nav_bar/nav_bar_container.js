@@ -10,8 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  loginButton: <button onClick={() => dispatch(openModal('Sign up'))}>Sign up</button>,
-  signupButton: <button onClick={() => dispatch(openModal('Log in'))}>Log in</button>
+  loginButton: <button className='nav-bar-button' onClick={() => dispatch(openModal('Sign up'))}>Sign up</button>,
+  signupButton: <button className='nav-bar-button' onClick={() => dispatch(openModal('Log in'))}>Log in</button>
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

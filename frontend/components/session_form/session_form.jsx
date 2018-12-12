@@ -9,7 +9,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearErrors();
+    this.props.clearErrors(); 
   }
 
   handleSubmit(e) {
@@ -26,11 +26,11 @@ class SessionForm extends React.Component {
   renderOtherForm () {
     if (this.props.formType === 'Sign up') {
       return (<span>Already have a Yurbnb account? 
-              <Link to='/login'>Log in</Link>
+              {this.props.otherForm}
               </span>)
     } else {
       return (<span>Don't have a Yurbnb account? 
-            <Link to='/signup'>Sign up</Link>
+            {this.props.otherForm}
             </span>)
     }
   }

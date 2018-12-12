@@ -8,6 +8,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
@@ -20,7 +24,7 @@ class SessionForm extends React.Component {
   }
   
   renderOtherForm () {
-    if (this.props.formType === 'signup') {
+    if (this.props.formType === 'Sign up') {
       return (<span>Already have a Yurbnb account? 
               <Link to='/login'>Log in</Link>
               </span>)
@@ -32,7 +36,7 @@ class SessionForm extends React.Component {
   }
 
   renderFields() {
-    if (this.props.formType === 'signup') {
+    if (this.props.formType === 'Sign up') {
       return (
         <div>
           <label>Email: 
@@ -67,6 +71,7 @@ class SessionForm extends React.Component {
     const errors = this.props.errors.map(error => <li key={error}>{error}</li>)
     return (
       <div>
+        <h2>{this.props.formType}</h2>
         <form onSubmit={this.handleSubmit}>
           {this.renderFields()}
           <input type="submit" value='Submit'/>

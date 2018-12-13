@@ -10,6 +10,8 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Listing
 
+  has_one_attached :photo
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

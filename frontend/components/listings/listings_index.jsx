@@ -14,10 +14,10 @@ class ListingsIndex extends React.Component {
         <header>
           <NavBarContainer />
         </header>
+        <div className='spacer'></div>
+        <div><h3 className='where-to-stay'>Homes in San Francisco</h3></div>
         <div className='listings-index-container'>
-          <ul>
             {listings}
-          </ul>
         </div>
       </>
       );

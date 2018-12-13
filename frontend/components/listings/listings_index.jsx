@@ -7,9 +7,11 @@ class ListingsIndex extends React.Component {
   }
 
   render() {
-    const listings = this.props.listings.map(listing => <ListingIndexItem listing={listing} fetchListing={this.props.fetchListing} />)
+    const listings = this.props.listings.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
     return(
-
+        <ul>
+          {listings}
+        </ul>
       );
   }
 }

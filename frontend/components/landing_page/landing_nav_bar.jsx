@@ -9,7 +9,7 @@ const LandingNavBar = (props) => {
         <div className='landing-nav-bar-container'>
           <div className='landing-left-nav-bar'>
             <div>
-              <Link to='/' className='logo'><div className='logo'></div></Link>
+              <Link to='/listings' className='logo'><div className='logo'></div></Link>
             </div>
           </div>
           <div className='landing-links-container'>
@@ -24,7 +24,7 @@ const LandingNavBar = (props) => {
       <div className='landing-nav-bar-container'>
         <div className='landing-left-nav-bar'>
           <div>
-            <Link to='/' className='logo'><div className='logo'></div></Link>
+            <Link to='/listings' className='logo'><div className='logo'></div></Link>
           </div>
         </div>
         <div className='landing-links-container'>

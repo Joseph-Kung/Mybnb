@@ -5,7 +5,7 @@ import Root from './components/root';
 
 
 //TEST
-// import { signup, login, logout } from './actions/sessions/session_actions';
+import { fetchListings, fetchListing, createListing, deleteListing } from './actions/listings/listing_actions';
 //TEST
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,10 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
 
   //TEST
-  // window.signup = signup;
-  // window.login = login;
-  // window.logout = logout;
-  // window.store = store
+    window.fetchListings = fetchListings;
+    window.fetchListing = fetchListing;
+    window.createListing = createListing;
+    window.deleteListing = deleteListing;
+    window.store = store
+
   //TEST
 
   ReactDOM.render(<Root store={store} />, root)

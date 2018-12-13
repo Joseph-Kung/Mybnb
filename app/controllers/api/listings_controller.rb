@@ -23,6 +23,7 @@ class Api::ListingsController < ApplicationController
   def destroy
     @listing = Listing.find(params[:id])
     @listing.delete
+    render :show
   end
 
   private

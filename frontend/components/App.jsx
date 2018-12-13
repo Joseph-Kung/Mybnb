@@ -16,7 +16,6 @@ const App = () => (
     <Route exact path='/' component={LandingPage} />
     <Redirect to='/' />
     </Switch>
-    {/* <NavBarContainer /> */}
   </div>
 )
 

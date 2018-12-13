@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import LandingPage from './landing_page/landing_page';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
@@ -10,11 +10,12 @@ import ListingShowContainer from './listings/listing_show_container'
 const App = () => (
   <div>
     <Modal />
-    <header>
-    </header>
+    <Switch>
+    <Route path='/listings/:listingId' component={ListingShowContainer} />
+    <Route path='/listings' component={ListingsIndexContainer} />
     <Route exact path='/' component={LandingPage} />
-    <Route exact path='/listings' component={ListingsIndexContainer} />
-    <Route exact path='/listings/:listingId' component={ListingShowContainer} />
+    <Redirect to='/' />
+    </Switch>
     {/* <NavBarContainer /> */}
   </div>
 )

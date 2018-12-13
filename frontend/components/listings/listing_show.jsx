@@ -1,6 +1,7 @@
 import React from 'react';
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import NavBarContainer from '../nav_bar/nav_bar_container';
 // import 'react-dates/lib/css/_datepicker.css';
 
 class ListingShow extends React.Component {
@@ -8,10 +9,8 @@ class ListingShow extends React.Component {
     super(props);
   }
 
-  componentDidmount() {
-    debugger;
-    const { fetchListing, ownProps} = this.props;
-    fetchListing(ownProps.match.params.listingId);
+  componentDidMount() {
+    this.props.fetchListing(this.props.match.params.listingId);
   }
 
   render() {
@@ -44,58 +43,63 @@ class ListingShow extends React.Component {
   
       return (
         <>
-        <div className='show-page-pictures'>
-  
-        </div>
-        <div className='show-page-body'>
-          <div className='show-page-content'>
-            <span>{listing.privateRoom}</span>
-            <h1>{listing.title}</h1>
-            <div className='show-house-info'>
-              <span>
-                <i class="fas fa-users"></i>
-                <span>{listing.num_guests} guests</span>
-              </span>
-              <span>
-                <i class="fas fa-home"></i>
-                <span>{listing.num_bedrooms} bedrooms</span>
-              </span>
-              <span>
-                <i class="fas fa-bed"></i>
-                <span>{listing.num_beds} beds</span>
-              </span>
-              <span>
-                <i class="fas fa-shower"></i>
-                <span>{listing.num_bathrooms} baths</span>
-              </span>
-            </div>
-            <div className='show-page-description'>
-              <span>{listing.description}</span>
-            </div>
-            <section className='amenity-container'>
-              <div className='amenity-header'>Amenities</div>
-              {kitchen}
-              {parking}
-              {tv}
-              {wifi}
-              {air_con}
-              {pool}
-              {heater}
-            </section>
-            <div className='date-range-picker'>
-              {/* <DateRangePicker
-                startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-              /> */}
-            </div>
+        <header>
+          <NavBarContainer />
+        </header>
+        <div className='show-page-container'>
+          <div className='show-page-pictures'>
+    
           </div>
-          <div className='show-page-booking'>
-  
+          <div className='show-page-body'>
+            <div className='show-page-content'>
+              <span>{listing.privateRoom}</span>
+              <h1>{listing.title}</h1>
+              <div className='show-house-info'>
+                <span>
+                  <i className="fas fa-users"></i>
+                  <span>{listing.num_guests} guests</span>
+                </span>
+                <span>
+                  <i className="fas fa-home"></i>
+                  <span>{listing.num_bedrooms} bedrooms</span>
+                </span>
+                <span>
+                  <i className="fas fa-bed"></i>
+                  <span>{listing.num_beds} beds</span>
+                </span>
+                <span>
+                  <i className="fas fa-shower"></i>
+                  <span>{listing.num_bathrooms} baths</span>
+                </span>
+              </div>
+              <div className='show-page-description'>
+                <span>{listing.description}</span>
+              </div>
+              <section className='amenity-container'>
+                <div className='amenity-header'>Amenities</div>
+                {kitchen}
+                {parking}
+                {tv}
+                {wifi}
+                {air_con}
+                {pool}
+                {heater}
+              </section>
+              <div className='date-range-picker'>
+                {/* <DateRangePicker
+                  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                  startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                  endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                  onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                  onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                /> */}
+              </div>
+            </div>
+            <div className='show-page-booking'>
+    
+            </div>
           </div>
         </div>
         </>

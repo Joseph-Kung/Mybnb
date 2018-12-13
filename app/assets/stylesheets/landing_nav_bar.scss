@@ -17,16 +17,6 @@
   border-bottom: 4px solid white;
 }
 
-.landing-logo {
-  background-image: image-url('airbnb-logo.png');
-  background-size: contain;
-  width: 50px;
-  height: 54px;
-  margin-left: 10px;
-  margin-top: -4px;
-  margin-right: 20px;
-}
-
 .landing-linkedin {
   background-image: image-url('linkedin-white.png');
   background-size: cover;
@@ -76,8 +66,8 @@
 
 .landing-search-bar > i {
   font-size: 28px;
-  margin-left: 5px;
-  margin-right: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .landing-search-bar-input {
@@ -89,8 +79,8 @@
 .landing-page-container {
   background-image: image-url(landing_page);
   background-size: cover;
-  width: 1679px;
-  height: 866px;
+  width: 100%;
+  height: 100%;
   position: fixed;
 }
 

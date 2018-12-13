@@ -104,7 +104,7 @@ class SessionForm extends React.Component {
         <form className='parent-session-form-fields'>
           {this.renderFields()}
           <div>
-            <button className='form-submit' onClick={this.handleSubmit('new')}>Submit</button>
+            <button className='form-submit' onClick={this.handleSubmit('new')}>{this.props.formType}</button>
           </div>
           <div>
             <button className='form-submit' onClick={this.handleSubmit('guest')}>Demo User</button>
@@ -114,6 +114,7 @@ class SessionForm extends React.Component {
               {errors}
             </ul>
           </div>
+          <div className='bar-separator'></div>
           <div>
             {this.renderOtherForm()}
           </div>

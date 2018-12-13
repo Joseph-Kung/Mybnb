@@ -9,11 +9,11 @@ const NavBar = (props) => {
         <div className='nav-bar-container'>
           <div className='left-nav-bar'>
             <div>
-              <Link to='/' className='logo'><div className='logo'></div></Link>
+              <Link to='/listings' className='logo'><div className='logo'></div></Link>
             </div>
             <div className='search-bar'>
               <i className="fas fa-search"></i>
-              <input type="text" className='search-bar-input' placeholer='Search' />
+              <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
             </div>
           </div>
           <div className='links-container'>
@@ -28,11 +28,11 @@ const NavBar = (props) => {
       <div className='nav-bar-container'>
         <div className='left-nav-bar'>
           <div>
-            <Link to='/' className='logo'><div className='logo'></div></Link>
+            <Link to='/listings' className='logo'><div className='logo'></div></Link>
           </div>
           <div className='search-bar'>
               <i className="fas fa-search"></i>
-            <input type="text" className='search-bar-input' placeholer='Search' />
+              <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
           </div>
         </div>
         <div className='links-container'>

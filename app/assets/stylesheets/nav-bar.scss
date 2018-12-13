@@ -20,11 +20,10 @@
 .logo {
   background-image: image-url('airbnb-logo.png');
   background-size: contain;
-  width: 50px;
-  height: 54px;
-  margin-left: 10px;
-  margin-top: -4px;
-  margin-right: 20px;
+  width: 30px;
+  height: 32px;
+  margin-left: 25px;
+  margin-right: 23px;
 }
 
 .linkedin {
@@ -57,27 +56,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 500px;
+  width: 543px;
 }
 
 .search-bar {
   border: 1px solid #EBEBEB;
   border-radius: 4px;
-  height: 60%;
+  height: 58%;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  width: 430px;
+  width: 465px;
 }
 
 .search-bar > i {
-  font-size: 20px;
-  margin-left: 5px;
-  margin-right: 8px;
+  font-size: 18px;
+  margin-left: 18px;
+  margin-right: 20px;
 }
 
 .search-bar-input {
   font-weight: 800;
-  font-size: 17px;
+  font-size: 16px;
   width: 100%;
+  color: black;
+}
+
+.bar-separator {
+  width: 500px;
+  height: 1px;
+  border-bottom: 1px solid #EBEBEB;
+  padding-bottom: 5px;
 }

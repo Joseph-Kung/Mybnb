@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
 
   //TEST
-  window.fetchListings = fetchListings;
-  window.fetchListing = fetchListing;
-  window.createListing = createListing;
-  window.deleteListing = deleteListing;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.fetchListings = fetchListings;
+  // window.fetchListing = fetchListing;
+  // window.createListing = createListing;
+  // window.deleteListing = deleteListing;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
   //TEST
 
   ReactDOM.render(<Root store={store} />, root)

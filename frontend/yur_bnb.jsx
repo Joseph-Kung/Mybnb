@@ -6,7 +6,7 @@ import 'react-dates/initialize';
 
 
 //TEST
-import { fetchListings, fetchListing, createListing, deleteListing } from './actions/listings/listing_actions';
+// import { fetchListings, fetchListing, createListing, deleteListing } from './actions/listings/listing_actions';
 //TEST
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -3,7 +3,6 @@ import { fetchListings } from '../../actions/listings/listing_actions';
 import ListingsIndex from './listings_index';
 
 const mapStateToProps = (state) => {
-  debugger;
   const sf = Object.values(state.entities.listings).filter(listing => listing.city === 'San Francisco');
   const ny = Object.values(state.entities.listings).filter(listing => listing.city === 'New York');
   const tokyo = Object.values(state.entities.listings).filter(listing => listing.city === 'Tokyo');

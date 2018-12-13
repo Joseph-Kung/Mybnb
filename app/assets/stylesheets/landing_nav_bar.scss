@@ -1,0 +1,104 @@
+.landing-nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  color: white;
+}
+
+
+.landing-nav-bar-button {
+  padding: 30px;
+  font-weight: 600px;
+}
+
+.landing-nav-bar-button:hover {
+  border-bottom: 4px solid white;
+}
+
+.landing-logo {
+  background-image: image-url('airbnb-logo.png');
+  background-size: contain;
+  width: 50px;
+  height: 54px;
+  margin-left: 10px;
+  margin-top: -4px;
+  margin-right: 20px;
+}
+
+.landing-linkedin {
+  background-image: image-url('linkedin.png');
+  background-size: cover;
+  padding: 17px;
+  margin: 24px 30px;
+}
+
+.github {
+  background-image: image-url('github.png');
+  background-size: cover;
+  padding: 18px;
+  margin: 22px 30px
+}
+
+.landing-link-button {
+  opacity: 0.65;
+}
+
+.landing-link-button:hover {
+  border-bottom: 4px solid white;
+}
+
+.landing-links-container {
+  display: flex;
+}
+
+.landing-left-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.landing-search-bar {
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  height: 70px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  width: 700px;
+  background-color: white;
+  position: absolute;
+  top: 346px;
+  left: 245px;
+}
+
+.landing-search-bar > i {
+  font-size: 28px;
+  margin-left: 5px;
+  margin-right: 8px;
+}
+
+.landing-search-bar-input {
+  font-weight: 800;
+  font-size: 24px;
+  width: 100%;
+}
+
+.landing-page-container {
+  background-image: image-url(landing_page);
+  background-size: cover;
+  width: 1679px;
+  height: 866px;
+  position: fixed;
+}
+
+.landing-page-text {
+  font-size: 36px;
+  color: white;
+  top: 290px;
+  left: 246px;
+  position: absolute;
+}

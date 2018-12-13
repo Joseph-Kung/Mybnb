@@ -1,7 +1,6 @@
 class Api::ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
-    @listing.owner_id = current_user.id
 
     if @listing.save
       render :show
@@ -12,7 +11,12 @@ class Api::ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
-    render :show
+
+    if @listing
+      render :show
+    else
+      render json: ['Listing does not exist']
+    end
   end
 
   def index
@@ -22,8 +26,11 @@ class Api::ListingsController < ApplicationController
 
   def destroy
     @listing = Listing.find(params[:id])
-    @listing.delete
-    render :show
+    if @listing.delete
+      render :show
+    else
+      render json: ['Something went wrong']
+    end
   end
 
   private
@@ -31,7 +38,7 @@ class Api::ListingsController < ApplicationController
   def listing_params
     params.require(:listing).permit(
       :title, :city, :state, :zip_code, :latitude, :longitude, :num_rooms, :num_bathrooms, :address,
-      :price, :description, :private_room, :house, :washer, :dryer, :parking, :tv, :wifi, :air_con, :kitchen
+      :price, :description, :private_room, :house, :washer, :dryer, :parking, :tv, :wifi, :air_con, :kitchen, :owner_id
     )
   end
 end

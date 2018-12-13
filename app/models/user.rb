@@ -6,6 +6,10 @@ class User < ApplicationRecord
   attr_reader :password
   before_validation :ensure_session_token
 
+  has_many :listings,
+    foreign_key: :owner_id,
+    class_name: :Listing
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

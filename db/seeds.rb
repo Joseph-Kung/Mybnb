@@ -6,5 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+# User seed
 User.create!({email: 'admin', first_name: 'admin', last_name: 'admin', password: 'password'})
 User.create!({email: 'Guest', first_name: 'guest', last_name: 'guest', password: 'password'})
+
+
+# Listing seed
+Listing.create!({
+  owner_id: 1,
+  title: 'Awesome home in SF!',
+  address: '1691 43rd Ave',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94122,
+  latitude: 37.7624366,
+  longitude: -122.5028618,
+  num_rooms: 3,
+  num_bathrooms: 2,
+  price: 300,
+  description: 'Small home in sunset. Awesome location!',
+  private_room: false,
+  house: true,
+  washer: true,
+  dryer: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})

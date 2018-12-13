@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_13_003311) do
+ActiveRecord::Schema.define(version: 2018_12_13_172031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2018_12_13_003311) do
     t.text "description", null: false
     t.boolean "private_room", null: false
     t.boolean "house", null: false
-    t.boolean "washer", null: false
-    t.boolean "dryer", null: false
+    t.boolean "heater", null: false
+    t.boolean "pool", null: false
     t.boolean "parking", null: false
     t.boolean "tv", null: false
     t.boolean "wifi", null: false
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2018_12_13_003311) do
     t.boolean "kitchen", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "num_guests", null: false
+    t.integer "num_beds", null: false
     t.index ["city"], name: "index_listings_on_city"
     t.index ["owner_id"], name: "index_listings_on_owner_id"
   end

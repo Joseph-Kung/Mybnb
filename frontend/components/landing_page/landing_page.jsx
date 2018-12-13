@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import LandingNavBarContainer from './landing_nav_bar_container';
 
 const LandingPage = (props) => {

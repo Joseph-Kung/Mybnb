@@ -9,9 +9,9 @@ const App = () => (
   <div>
     <Modal />
     <header>
+    </header>
     <Route exact path='/' component={LandingPage} />
     {/* <NavBarContainer /> */}
-    </header>
   </div>
 )
 

@@ -8,7 +8,6 @@
   color: white;
 }
 
-
 .landing-nav-bar-button {
   padding: 30px;
   font-weight: 600px;
@@ -29,14 +28,14 @@
 }
 
 .landing-linkedin {
-  background-image: image-url('linkedin.png');
+  background-image: image-url('linkedin-white.png');
   background-size: cover;
   padding: 17px;
   margin: 24px 30px;
 }
 
-.github {
-  background-image: image-url('github.png');
+.landing-github {
+  background-image: image-url('github-white.png');
   background-size: cover;
   padding: 18px;
   margin: 22px 30px
@@ -101,4 +100,5 @@
   top: 290px;
   left: 246px;
   position: absolute;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }

@@ -13,8 +13,8 @@ const LandingNavBar = (props) => {
             </div>
           </div>
           <div className='landing-links-container'>
-            <a className='landing-link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
-            <a className='landing-link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+            <a className='landing-link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='landing-linkedin'></div></a>
+            <a className='landing-link-button' href="https://github.com/Joseph-Kung"><div className='landing-github'></div></a>
             {props.loginButton}
             {props.signupButton}
           </div>
@@ -28,8 +28,8 @@ const LandingNavBar = (props) => {
           </div>
         </div>
         <div className='landing-links-container'>
-          <a className='landing-link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
-          <a className='landing-link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+          <a className='landing-link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='landing-linkedin'></div></a>
+          <a className='landing-link-button' href="https://github.com/Joseph-Kung"><div className='landing-github'></div></a>
           <button className='landing-nav-bar-button' onClick={props.logout}>Log out</button>
         </div>
       </div>

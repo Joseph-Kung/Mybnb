@@ -8,7 +8,11 @@ class ListingsIndex extends React.Component {
   }
 
   render() {
-    const listings = this.props.listings.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
+    const sf = this.props.sf.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
+    const la = this.props.la.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
+    const ny = this.props.ny.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
+    const tokyo = this.props.tokyo.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
+    const paris = this.props.paris.map(listing => <ListingIndexItem key={listing.id} listing={listing} fetchListing={this.props.fetchListing} />)
     return(
       <>
         <header>
@@ -17,7 +21,11 @@ class ListingsIndex extends React.Component {
         <div className='spacer'></div>
         <div><h3 className='where-to-stay'>Homes in San Francisco</h3></div>
         <div className='listings-index-container'>
-            {listings}
+            {sf}
+        </div>
+        <div><h3 className='where-to-stay'>Homes in Los Angeles</h3></div>
+        <div className='listings-index-container'>
+            {la}
         </div>
       </>
       );

@@ -47,15 +47,16 @@ class ListingShow extends React.Component {
       if (listing.photoUrls) {
         largePictures = listing.photoUrls.slice(0,1).map( photo => <img key={photo} className='large-pic' src={photo}/>)
       } else {
-        largePictures = <div className='listing-picture'></div>
+        largePictures = <div className='default-big-pic'></div>
       }
 
       if (listing.photoUrls && listing.photoUrls.length === 4) {
         smallPictures = listing.photoUrls.slice(1).map(photo => <img key={photo} className='small-pic' src={photo} />)
       } else {
-        smallPictures = <><div className='small-pic'/>
-                        <div className='small-pic' />
-                        <div  className='small-pic'/></>
+        smallPictures = <><div className='default-small-pic'/>
+                        <div className='default-small-pic' />
+                        <div className='default-small-pic' />
+                        <div  className='default-small-pic'/></>
       }
     
 
@@ -65,14 +66,14 @@ class ListingShow extends React.Component {
           <NavBarContainer />
         </header>
         <div className='show-page-container'>
-        <div className='pictures-container'>
-          <div className='picture-large'>
-            {largePictures}
+          <div className='pictures-container'>
+            <div className='picture-large'>
+              {largePictures}
+            </div>
+            <div className='pictures-small' >
+              {smallPictures}
+            </div>
           </div>
-          <div className='pictures-small' >
-            {smallPictures}
-          </div>
-        </div>
   
           <div className='show-page-body'>
             <div className='show-page-content'>

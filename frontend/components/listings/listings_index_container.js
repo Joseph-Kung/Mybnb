@@ -10,6 +10,11 @@ const mapStateToProps = (state) => {
   const paris = Object.values(state.entities.listings).filter(listing => listing.city === 'Paris');
   return {
     listings: Object.values(state.entities.listings),
+    sf,
+    ny,
+    tokyo,
+    la,
+    paris,
   };
 };
 

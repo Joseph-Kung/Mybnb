@@ -8,3 +8,5 @@ end
 if @listing.owner.photo.attached?
   json.userPhoto url_for(@listing.owner.photo)
 end
+
+json.userName "#{@listing.owner.first_name} #{@listing.owner.last_name}"

@@ -9,11 +9,18 @@ import SmallPictures from '../pictures/small_pictures';
 class ListingShow extends React.Component {
   constructor (props) {
     super(props);
+
+    this.handleHover = this.handleHover.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
   }
+
+  handleHover(e) { 
+    $('.picture-container').hover(() => { $('picture-container').not(e).each( pic => pic.css('filter', 'brightness(50%)')) },
+      () => { $('picture-container').not(e).each(pic => pic.css('filter', 'none')) })
+}
 
   render() {
     const { listing } = this.props;
@@ -40,19 +47,6 @@ class ListingShow extends React.Component {
       }
       if (listing.heater === true) {
         heater = <div className='amenity'><i className="fas fa-fire"></i> Heater</div>
-      }
-
-
-      // Pics
-      let smallPictures;
-
-      if (listing.photoUrls && listing.photoUrls.length > 1) {
-        smallPictures = listing.photoUrls.slice(1).map(photo => <div key={photo.slice(1)} className='small-pictures-container'><img key={photo} className='small-pic' src={photo} /></div>)
-      } else {
-        smallPictures = <><div className='default-small-pic'/>
-                        <div className='default-small-pic' />
-                        <div className='default-small-pic' />
-                        <div  className='default-small-pic'/></>
       }
       
       let houseType;
@@ -112,7 +106,10 @@ class ListingShow extends React.Component {
                   <span className='city-type'>{listing.city}</span>
                 </div>
                 <div className='show-page-user-profile'>
-                  
+                  <div className='user-profile-picture-container'>
+                    <img className='user-picture' src={listing.userPhoto} />
+                  </div>
+                  <div className='user-profile-name'>{listing.userName}</div>
                 </div>
               </div>
               
@@ -135,9 +132,9 @@ class ListingShow extends React.Component {
                 </span>
               </div>
 
-                <div className='line-space-container'>
-                  <div className='line-space' />
-                </div>
+              <div className='line-space-container'>
+                <div className='line-space' />
+              </div>
 
               <div className='show-page-description'>
                 <p>{listing.description}</p>

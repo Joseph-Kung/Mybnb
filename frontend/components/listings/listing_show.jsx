@@ -50,7 +50,7 @@ class ListingShow extends React.Component {
         largePictures = <div className='default-big-pic'></div>
       }
 
-      if (listing.photoUrls && listing.photoUrls.length === 4) {
+      if (listing.photoUrls && listing.photoUrls.length > 1) {
         smallPictures = listing.photoUrls.slice(1).map(photo => <img key={photo} className='small-pic' src={photo} />)
       } else {
         smallPictures = <><div className='default-small-pic'/>
@@ -66,6 +66,7 @@ class ListingShow extends React.Component {
         houseType = 'Entire House'
       }
     
+      const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
 
       return (
         <>
@@ -84,8 +85,16 @@ class ListingShow extends React.Component {
   
           <div className='show-page-body'>
             <div className='sticky-page-booking'>
+              <div className='booking-header'>
+                <span className='booking-price'>${listing.price} <span>per night</span></span>
+                <span className='booking-rating'>{rating}</span>
+              </div>
 
+              <div className='line-space-container-booking'>
+                <div className='line-space' />
+              </div>
             </div>
+
             <div className='show-page-content'>
               <div className='show-page-header'>
                 <div className='show-page-header-content'>
@@ -97,6 +106,7 @@ class ListingShow extends React.Component {
                   
                 </div>
               </div>
+              
               <div className='show-house-info'>
                 <span className='house-info-detail'>
                   <i className="fas fa-users"></i>
@@ -115,11 +125,21 @@ class ListingShow extends React.Component {
                   <span>{listing.numBathrooms} baths</span>
                 </span>
               </div>
+
+                <div className='line-space-container'>
+                  <div className='line-space' />
+                </div>
+
               <div className='show-page-description'>
                 <p>{listing.description}</p>
               </div>
+
+              <div className='line-space-container'>
+                <div className='line-space' />
+              </div>
+              
+              <div className='show-page-info-header'>Amenities</div>
               <section className='amenity-container'>
-                <div className='amenity-header'>Amenities</div>
                 {kitchen}
                 {parking}
                 {tv}
@@ -128,6 +148,12 @@ class ListingShow extends React.Component {
                 {pool}
                 {heater}
               </section>
+
+                <div className='line-space-container'>
+                  <div className='line-space' />
+                </div>
+                
+              <div className='show-page-info-header'>Availability</div>
               <div className='date-range-picker'>
               </div>
             </div>

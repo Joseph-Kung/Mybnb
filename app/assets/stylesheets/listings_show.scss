@@ -61,11 +61,12 @@
   padding: 0px 24px;
   border: 1px solid #e4e4e4;
   background-color: white;
-  margin: 0px 24px;
+  margin-left: 40px;
 }
 
 .show-page-content {
-  width: 60%;
+  width: 50%;
+  overflow: hidden;
 }
 
 .house-type {
@@ -86,6 +87,10 @@
   height: 118px;
 }
 
+.show-house-info {
+    padding-bottom: 5px;
+}
+
 .house-info-detail > i {
   margin-right: 12px;
 }
@@ -95,4 +100,64 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: 350;
+}
+
+.show-page-description {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #484848;
+  font-weight: normal;
+}
+
+.line-space {
+  border-top: 1px solid #EBEBEB;
+  width: 100%;
+}
+
+.line-space-container {
+  padding: 20px 0px;
+}
+
+.show-page-info-header {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.amenity-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.amenity {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.booking-header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.booking-price {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.booking-price > span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.booking-rating {
+  color: #008489;
+  font-size: 8px;
+}
+
+.line-space-container-booking {
+  padding: 10px;
 }

@@ -7,12 +7,19 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     return 'Whole House';
   }
 
+  let photo;
+  if (listing.photoUrl) {
+    photo = <img className='listing-picture' src={listing.photoUrl} />
+  } else {
+    photo = <div className='listing-picture'></div>
+  }
+
   const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
   return (
     <>
     <div className='listing-item-container'>
       <Link to={`/listings/${listing.id}`}>
-            <div className='listing-picture'></div>
+            {photo}
             <div className='listing-item-details'>
               <span className='listing-type'>{findType()} 	• {listing.city}</span>
               <div className='listing-title'>{listing.title}</div>

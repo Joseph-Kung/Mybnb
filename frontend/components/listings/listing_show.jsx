@@ -40,16 +40,40 @@ class ListingShow extends React.Component {
         heater = <div className='amenity'><i className="fas fa-fire"></i> Heater</div>
       }
 
-  
+
+      // Pics
+      let largePictures;
+      let smallPictures;
+      if (listing.photoUrls) {
+        largePictures = listing.photoUrls.slice(0,1).map( photo => <img key={photo} className='large-pic' src={photo}/>)
+      } else {
+        largePictures = <div className='listing-picture'></div>
+      }
+
+      if (listing.photoUrls && listing.photoUrls.length === 4) {
+        smallPictures = listing.photoUrls.slice(1).map(photo => <img key={photo} className='small-pic' src={photo} />)
+      } else {
+        smallPictures = <><div className='small-pic'/>
+                        <div className='small-pic' />
+                        <div  className='small-pic'/></>
+      }
+    
+
       return (
         <>
         <header>
           <NavBarContainer />
         </header>
         <div className='show-page-container'>
-          <div className='show-page-pictures'>
-    
+        <div className='pictures-container'>
+          <div className='picture-large'>
+            {largePictures}
           </div>
+          <div className='pictures-small' >
+            {smallPictures}
+          </div>
+        </div>
+  
           <div className='show-page-body'>
             <div className='show-page-content'>
               <span>{listing.privateRoom}</span>

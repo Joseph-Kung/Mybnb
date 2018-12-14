@@ -1,43 +1,10 @@
-.show-page-container {
-  padding-top: 90px;
-}
-
-// .large-pic {
-//   width: 596px;
-//   height: 715px;
-// }
-
-// .small-pic {
-//   width: 298px;
-//   height: 352.633px,
-// }
-
-// .default-small-pic {
-//   background-image: image-url('model_home.jpg');
-//   background-size: cover;
-//   width: 441px;
-//   height: 352.633px
-// }
-
-// .default-big-pic {
-//   background-image: image-url('model_home.jpg');
-//   background-size: cover;
-//   width: 596px;
-//   height: 716px;;
-// }
-
-// .pictures-container {
-//   display: flex;
-// }
-
-// .pictures-small {
-  
-// }
-
 .pictures-container {
   height: 600px;
   width: 100%;
   display: flex;
+  padding-bottom: 30px;
+  color: #4e4126;
+  line-height: 16px;
 }
 
 .large-pic {
@@ -77,5 +44,55 @@
   flex-wrap: wrap;
 }
 
+.show-page-body {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin: auto;
+  min-height: 1700px;
+  width: 65%;
+}
 
+.sticky-page-booking {
+  position: sticky;
+  top: 0;
+  width: 326px;
+  height: 472px;
+  padding: 0px 24px;
+  border: 1px solid #e4e4e4;
+  background-color: white;
+  margin: 0px 24px;
+}
 
+.show-page-content {
+  width: 60%;
+}
+
+.house-type {
+  font-size: 12px;
+}
+
+.show-page-header-content > h1 {
+  font-size: 36px;
+}
+
+.city-type {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.show-page-header {
+  width: 100%;
+  height: 118px;
+}
+
+.house-info-detail > i {
+  margin-right: 12px;
+}
+
+.house-info-detail > span {
+  margin-right: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 350;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import NavBarContainer from '../nav_bar/nav_bar_container';
-// import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/lib/css/_datepicker.css';
 
 class ListingShow extends React.Component {
   constructor (props) {
@@ -58,6 +58,13 @@ class ListingShow extends React.Component {
                         <div className='default-small-pic' />
                         <div  className='default-small-pic'/></>
       }
+      
+      let houseType;
+      if (listing.privateRoom === true) {
+        houseType = 'Private Room'
+      } else {
+        houseType = 'Entire House'
+      }
     
 
       return (
@@ -76,29 +83,40 @@ class ListingShow extends React.Component {
           </div>
   
           <div className='show-page-body'>
+            <div className='sticky-page-booking'>
+
+            </div>
             <div className='show-page-content'>
-              <span>{listing.privateRoom}</span>
-              <h1>{listing.title}</h1>
+              <div className='show-page-header'>
+                <div className='show-page-header-content'>
+                  <span className='house-type'>{houseType}</span>
+                  <h1>{listing.title}</h1>
+                  <span className='city-type'>{listing.city}</span>
+                </div>
+                <div className='show-page-user-profile'>
+                  
+                </div>
+              </div>
               <div className='show-house-info'>
-                <span>
+                <span className='house-info-detail'>
                   <i className="fas fa-users"></i>
-                  <span>{listing.num_guests} guests</span>
+                  <span>{listing.numGuests} guests</span>
                 </span>
-                <span>
+                <span className='house-info-detail'>
                   <i className="fas fa-home"></i>
-                  <span>{listing.num_bedrooms} bedrooms</span>
+                  <span>{listing.numRooms} bedrooms</span>
                 </span>
-                <span>
+                <span className='house-info-detail'>
                   <i className="fas fa-bed"></i>
-                  <span>{listing.num_beds} beds</span>
+                  <span>{listing.numBeds} beds</span>
                 </span>
-                <span>
+                <span className='house-info-detail'>
                   <i className="fas fa-shower"></i>
-                  <span>{listing.num_bathrooms} baths</span>
+                  <span>{listing.numBathrooms} baths</span>
                 </span>
               </div>
               <div className='show-page-description'>
-                <span>{listing.description}</span>
+                <p>{listing.description}</p>
               </div>
               <section className='amenity-container'>
                 <div className='amenity-header'>Amenities</div>
@@ -112,9 +130,6 @@ class ListingShow extends React.Component {
               </section>
               <div className='date-range-picker'>
               </div>
-            </div>
-            <div className='show-page-booking'>
-    
             </div>
           </div>
         </div>

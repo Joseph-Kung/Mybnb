@@ -93,6 +93,19 @@ class ListingShow extends React.Component {
               <div className='line-space-container-booking'>
                 <div className='line-space' />
               </div>
+
+              <div className='booking-fields'>
+                <span>Dates</span>
+                <div className='space-box'></div>
+                <div className='date-picker-container'></div>
+                <span>Guests</span>
+                <div className='space-box'></div>
+                <div className='guest-input-field'></div>
+              </div>
+              <div className='form-submit-section'>
+                <button className='book-form-submit'>Request to Book</button>
+                <span>You won't be charged yet</span>
+              </div>
             </div>
 
             <div className='show-page-content'>

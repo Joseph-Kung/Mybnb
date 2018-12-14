@@ -10,6 +10,11 @@
 .large-pic {
   width: 100%;
   height: 100%;
+  transition: transform .1s;
+}
+
+.large-pic:hover {
+  transform: scale(1.1);
 }
 
 .default-big-pic {
@@ -17,11 +22,21 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+  transition: transform .1s;
+}
+
+.default-big-pic:hover {
+  transform: scale(1.1);
 }
 
 .small-pic {
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
+  transition: transform .05s;
+}
+
+.small-pic:hover {
+  transform: scale(1.1);
 }
 
 .default-small-pic {
@@ -29,12 +44,14 @@
   background-size: cover;
   height: 50%;
   width: 50%;
+  transition: transform .1s;
 }
 
 
 .picture-large {
   height: 100%;
   width: 50%;
+  overflow: hidden;
 }
 
 .pictures-small {
@@ -42,6 +59,7 @@
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .show-page-body {
@@ -200,4 +218,10 @@
   line-height: 16px;
   font-weight: 600;
   margin-top: 5px;
+}
+
+.small-pictures-container {
+  height: 50%;
+  width: 50%;
+  overflow: hidden;
 }

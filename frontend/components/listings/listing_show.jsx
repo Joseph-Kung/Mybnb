@@ -3,6 +3,8 @@ import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import NavBarContainer from '../nav_bar/nav_bar_container';
 import 'react-dates/lib/css/_datepicker.css';
+import LargePictures from '../pictures/large_pictures';
+import SmallPictures from '../pictures/small_pictures';
 
 class ListingShow extends React.Component {
   constructor (props) {
@@ -42,16 +44,10 @@ class ListingShow extends React.Component {
 
 
       // Pics
-      let largePictures;
       let smallPictures;
-      if (listing.photoUrls) {
-        largePictures = listing.photoUrls.slice(0,1).map( photo => <img key={photo} className='large-pic' src={photo}/>)
-      } else {
-        largePictures = <div className='default-big-pic'></div>
-      }
 
       if (listing.photoUrls && listing.photoUrls.length > 1) {
-        smallPictures = listing.photoUrls.slice(1).map(photo => <img key={photo} className='small-pic' src={photo} />)
+        smallPictures = listing.photoUrls.slice(1).map(photo => <div key={photo.slice(1)} className='small-pictures-container'><img key={photo} className='small-pic' src={photo} /></div>)
       } else {
         smallPictures = <><div className='default-small-pic'/>
                         <div className='default-small-pic' />
@@ -76,10 +72,10 @@ class ListingShow extends React.Component {
         <div className='show-page-container'>
           <div className='pictures-container'>
             <div className='picture-large'>
-              {largePictures}
+              <LargePictures listing={this.props.listing} />
             </div>
             <div className='pictures-small' >
-              {smallPictures}
+              <SmallPictures listing={this.props.listing} />
             </div>
           </div>
   

@@ -10,7 +10,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = Listing.with_attached_photos.find(params[:id])
 
     if @listing
       render :show

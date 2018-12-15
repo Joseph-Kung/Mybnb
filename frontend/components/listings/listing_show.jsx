@@ -9,7 +9,7 @@ import SmallPictures from '../pictures/small_pictures';
 class ListingShow extends React.Component {
   constructor (props) {
     super(props);
-
+    this.state = {startDate: null, endDate: null}
     this.handleHover = this.handleHover.bind(this);
   }
 
@@ -86,10 +86,21 @@ class ListingShow extends React.Component {
 
               <div className='booking-fields'>
                 <span>Dates</span>
-                <div className='space-box'></div>
-                <div className='date-picker-container'></div>
+                <div className='date-picker-container'>
+                    <DateRangePicker
+                      startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                      startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                      endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                      endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                      onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                      focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                      onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                      startDatePlaceholderText={'Check in'}
+                      endDatePlaceholderText={'Check out'}
+                      numberOfMonths={1}
+                    />
+                </div>
                 <span>Guests</span>
-                <div className='space-box'></div>
                 <div className='guest-input-field'></div>
               </div>
               <div className='form-submit-section'>
@@ -161,6 +172,15 @@ class ListingShow extends React.Component {
                 
               <div className='show-page-info-header'>Availability</div>
               <div className='date-range-picker'>
+                  <DayPickerRangeController
+                    startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                    endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                    onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                    focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                    onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                    numberOfMonths={2}
+                    hideKeyboardShortcutsPanel={true}
+                  />
               </div>
             </div>
           </div>

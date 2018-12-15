@@ -90,7 +90,7 @@
 .sticky-page-booking {
   position: sticky;
   top: 0;
-  width: 326px;
+  width: 336px;
   height: 348px;
   padding: 0px 24px;
   border: 1px solid #e4e4e4;
@@ -216,7 +216,7 @@
 
 .book-form-submit {
   margin: 15px 0px;
-  margin-left: 12px;
+  margin-left: -8px;
   background: rgb(255, 90, 95);
   border-radius: 4px;
   border-width: 2px;
@@ -233,6 +233,7 @@
   font-size: 12px;
   font-weight: 450;
   color: rgb(72, 72, 72);
+  margin: 5px 0px;
 }
 
 .space-box {
@@ -286,5 +287,9 @@
   line-height: 18px;
   font-weight: normal;
   color: #767676;
+}
+
+.date-range-picker {
+  margin: 5px 0px;
 }
 

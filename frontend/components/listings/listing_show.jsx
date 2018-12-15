@@ -5,22 +5,17 @@ import NavBarContainer from '../nav_bar/nav_bar_container';
 import 'react-dates/lib/css/_datepicker.css';
 import LargePictures from '../pictures/large_pictures';
 import SmallPictures from '../pictures/small_pictures';
+import BookingFormContainer from '../booking/booking_form_container';
 
 class ListingShow extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {startDate: null, endDate: null}
-    this.handleHover = this.handleHover.bind(this);
+    this.state = {startDate: null, endDate: null, numGuests: 1}
   }
 
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
   }
-
-  handleHover(e) { 
-    $('.picture-container').hover(() => { $('picture-container').not(e).each( pic => pic.css('filter', 'brightness(50%)')) },
-      () => { $('picture-container').not(e).each(pic => pic.css('filter', 'none')) })
-}
 
   render() {
     const { listing } = this.props;
@@ -83,35 +78,10 @@ class ListingShow extends React.Component {
               <div className='line-space-container-booking'>
                 <div className='line-space' />
               </div>
-
-              <div className='booking-fields'>
-                <span>Dates</span>
-                <div className='date-picker-container'>
-                    <DateRangePicker
-                      startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                      startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                      endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                      endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                      onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                      focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                      onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-                      startDatePlaceholderText={'Check in'}
-                      endDatePlaceholderText={'Check out'}
-                      numberOfMonths={1}
-                      minimumNights={1}
-                      // isDayBlocked={true}
-                    />
-                </div>
-                <span>Guests</span>
-                <div className='guest-input-field'></div>
-                <div className='guest-button-container'>
-                  <button className='guest-button'></button>
-                </div>
-              </div>
-              <div className='form-submit-section'>
-                <button className='book-form-submit'>Request to Book</button>
-                <span>You won't be charged yet</span>
-              </div>
+  
+              <BookingFormContainer startDate={this.state.startDate} 
+                                    endDate={this.state.endDate} 
+                                    listing={this.props.listing}/>
             </div>
 
             <div className='show-page-content'>

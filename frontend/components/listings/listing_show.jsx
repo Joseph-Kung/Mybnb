@@ -98,10 +98,15 @@ class ListingShow extends React.Component {
                       startDatePlaceholderText={'Check in'}
                       endDatePlaceholderText={'Check out'}
                       numberOfMonths={1}
+                      minimumNights={1}
+                      // isDayBlocked={true}
                     />
                 </div>
                 <span>Guests</span>
                 <div className='guest-input-field'></div>
+                <div className='guest-button-container'>
+                  <button className='guest-button'></button>
+                </div>
               </div>
               <div className='form-submit-section'>
                 <button className='book-form-submit'>Request to Book</button>
@@ -180,6 +185,8 @@ class ListingShow extends React.Component {
                     onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                     numberOfMonths={2}
                     hideKeyboardShortcutsPanel={true}
+                    minimumNights={1}
+                    // isDayBlocked={}
                   />
               </div>
             </div>

@@ -1,5 +1,5 @@
 .pictures-container {
-  height: 600px;
+  height: 550px;
   width: 100%;
   display: flex;
   margin-bottom: 30px;
@@ -53,23 +53,25 @@
   justify-content: space-evenly;
   margin: auto;
   min-height: 1700px;
-  width: 65%;
+  min-width: 744px;
+  width: 75%;
 }
 
 .sticky-page-booking {
   position: sticky;
-  top: 0;
-  width: 336px;
+  top: 20px;
+  width: 370px;
   height: 374px;
   padding: 0px 24px;
   border: 1px solid #e4e4e4;
   background-color: white;
   margin-left: 40px;
+  z-index: 3;
 }
 
 .show-page-content {
-  width: 55%;
-  overflow: hidden;
+  width: 58.333333333333336%;
+  min-width: 618px;
 }
 
 .house-type {

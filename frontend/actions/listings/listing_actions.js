@@ -5,6 +5,7 @@ export const RECEIVE_LISTING = 'RECEIVE_LISTING';
 export const REMOVE_LISTING = 'REMOVE_LISTING';
 export const RECEIVE_LISTING_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_LISTINGS_ERRORS = 'CLEAR_LISTINGS_ERRORS';
+export const START_LOADING = 'START_LOADING';
 
 const receiveListings = listings => ({
   type: RECEIVE_LISTINGS,
@@ -26,20 +27,26 @@ const receiveErrors = errors => ({
   errors,
 });
 
+export const startLoading = () => ({
+  type: START_LOADING,
+});
+
 export const clearErrors = () => ({
   type: CLEAR_LISTINGS_ERRORS,
 });
 
-export const fetchListings = () => dispatch => (
-  listingApiUtil.fetchListings()
-    .then(listings => dispatch(receiveListings(listings)))
-);
+export const fetchListings = () => (dispatch) => {
+  dispatch(startLoading());
+  return (listingApiUtil.fetchListings()
+    .then(listings => dispatch(receiveListings(listings))));
+};
 
-export const fetchListing = listingId => dispatch => (
-  listingApiUtil.fetchListing(listingId)
+export const fetchListing = listingId => (dispatch) => {
+  dispatch(startLoading());
+  return (listingApiUtil.fetchListing(listingId)
     .then(listing => dispatch(receiveListing(listing),
-      errors => dispatch(receiveErrors(errors))))
-);
+      errors => dispatch(receiveErrors(errors)))));
+};
 
 export const createListing = listing => dispatch => (
   listingApiUtil.createListing(listing)

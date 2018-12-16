@@ -17,6 +17,7 @@ module.exports = {
           loader: 'babel-loader',
           query: {
             presets: ['@babel/env', '@babel/react'],
+            plugins: ['emotion'],
           },
         },
       },

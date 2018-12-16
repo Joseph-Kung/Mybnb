@@ -4,6 +4,7 @@ import ListingShow from './listing_show';
 
 const mapStateToProps = (state, ownProps) => ({
   listing: state.entities.listings[ownProps.match.params.listingId],
+  loading: state.ui.loading,
 });
 
 const mapDispatchToProps = dispatch => ({

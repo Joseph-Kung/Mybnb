@@ -9,25 +9,49 @@
 
 # User seed
 User.create!({email: 'admin', first_name: 'admin', last_name: 'admin', password: 'password'})
+User.create!({email: 'stephencurry@gmail.com', first_name: 'Stephen', last_name: 'Curry', password: 'password'})
 User.create!({email: 'Guest', first_name: 'guest', last_name: 'guest', password: 'password'})
 
 
 # Listing seed
-Listing.create!({
-  owner_id: 1,
+sf1 = Listing.create!({
+  owner_id: 2,
   title: 'Awesome home in SF!',
-  address: '1691 43rd Ave',
+  address: '1490 23rd Ave',
   city: 'San Francisco',
   state: 'CA',
   zip_code: 94122,
-  latitude: 37.7624366,
-  longitude: -122.5028618,
-  num_guests: 2,
-  num_rooms: 1,
-  num_beds: 2,
-  num_bathrooms: 1,
-  price: 300,
-  description: 'Small home in sunset. Awesome location!',
+  latitude: 37.759870,
+  longitude: -122.480860,
+  num_guests: 3,
+  num_rooms: 2,
+  num_beds: 3,
+  num_bathrooms: 2,
+  price: 190,
+  description: 'The guest apartment has its own entrance located on the ground level of our home. The private apartment is 720 sq and has 8 ft ceilings. The living room and kitchen are new and the bath and the two bedrooms are remodeled.
+
+The apartment can sleep 4. The 2 bedrooms have garden view windows. One room with a queen size bed and the second bedroom with two twin size beds. All bed linens are provided.
+
+The eat-in kitchen is equipped with:
+
+(Please note that there is not a full sized built in oven and stovetop in the kitchen)
+
+counter top toaster oven 
+counter top large single burner induction hot plate
+large microwave
+full sized refrigerator 
+washer/dryer 
+electric tea kettle and electric coffee maker
+
+Private bath has a large shower (two shower heads), cherrywood vanity/sink, and a large mirror. Towels and soap/shampoo are provided.
+
+In the Living room area there is cable TV. Free WiFi is available throughout the apartment.
+
+Guests are welcome to share the garden; there is a large deck with seating and a small table.
+
+Neighborhood is the quiet Sunnyside district. The apartment is within 5 walk minutes of City College (CCSF). In our immediate neighborhood Whole Foods and Safeway supermarkets are within 5-15 walk minutes, 5 drive minutes and there are small cafes and eateries within the neighborhood.
+
+Glen Park is 25 walk or 10 bus minutes away and has several small shops, local restaurants, a postal service, library and is the location of the Glen Park BART station.',
   private_room: true,
   house: true,
   heater: false,
@@ -39,13 +63,25 @@ Listing.create!({
   kitchen: true
 })
 
+sf1pic1 = File.open('app/assets/images/sf1pic1.jpg')
+sf1pic2 = File.open('app/assets/images/sf1pic2.jpg')
+sf1pic3 = File.open('app/assets/images/sf1pic3.jpg')
+sf1pic4 = File.open('app/assets/images/sf1pic4.jpg')
+sf1pic5 = File.open('app/assets/images/sf1pic5.jpg')
+sf1.photos.attach(io: sf1pic1, filename: 'sf1pic1.jpg')
+sf1.photos.attach(io: sf1pic2, filename: 'sf1pic2.jpg')
+sf1.photos.attach(io: sf1pic3, filename: 'sf1pic3.jpg')
+sf1.photos.attach(io: sf1pic4, filename: 'sf1pic4.jpg')
+sf1.photos.attach(io: sf1pic5, filename: 'sf1pic5.jpg')
+
+
 Listing.create!({
-  owner_id: 1,
+  owner_id: 2,
   title: 'Perfect home in Richmond district',
-  address: '735 18th Ave',
+  address: '4051 19th St',
   city: 'San Francisco',
   state: 'CA',
-  zip_code: 94121,
+  zip_code: 94114,
   latitude: 37.7799262,
   longitude: -122.4772172,
   num_guests: 5,
@@ -64,6 +100,17 @@ Listing.create!({
   air_con: true,
   kitchen: true
 })
+
+sf1pic1 = File.open('app/assets/images/sf1pic1.jpg')
+sf1pic2 = File.open('app/assets/images/sf1pic2.jpg')
+sf1pic3 = File.open('app/assets/images/sf1pic3.jpg')
+sf1pic4 = File.open('app/assets/images/sf1pic4.jpg')
+sf1pic5 = File.open('app/assets/images/sf1pic5.jpg')
+sf1.photos.attach(io: sf1pic1, filename: 'sf1pic1.jpg')
+sf1.photos.attach(io: sf1pic2, filename: 'sf1pic2.jpg')
+sf1.photos.attach(io: sf1pic3, filename: 'sf1pic3.jpg')
+sf1.photos.attach(io: sf1pic4, filename: 'sf1pic4.jpg')
+sf1.photos.attach(io: sf1pic5, filename: 'sf1pic5.jpg')
 
 Listing.create!({
   owner_id: 1,

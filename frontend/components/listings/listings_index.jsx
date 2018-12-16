@@ -43,6 +43,10 @@ class ListingsIndex extends React.Component {
         <div className='listings-index-container'>
             {la}
         </div>
+        <div><h3 className='where-to-stay'>Homes in New York</h3></div>
+        <div className='listings-index-container'>
+            {ny}
+        </div>
       </>
       );
   }

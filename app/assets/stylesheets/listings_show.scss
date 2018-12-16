@@ -11,10 +11,6 @@
   filter: brightness(80%);
 }
 
-.default-small-pic:hover {
-  filter: brightness(110%);
-}
-
 .large-pic {
   width: 100%;
   height: 100%;
@@ -22,19 +18,6 @@
 }
 
 .large-pic:hover {
-  transform: scale(1.05);
-  filter: brightness(110%);
-}
-
-.default-big-pic {
-  background-image: image-url('model_home.jpg');
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  transition: transform 435ms;
-}
-
-.default-big-pic:hover {
   transform: scale(1.05);
   filter: brightness(110%);
 }
@@ -49,20 +32,6 @@
   transform: scale(1.05);
   filter: brightness(110%);
 }
-
-.default-small-pic {
-  background-image: image-url('model_home.jpg');
-  background-size: cover;
-  height: 50%;
-  width: 50%;
-  transition: transform 435ms;
-}
-
-.default-small-pic:hover {
-  transform: scale(1.05);
-  filter: brightness(110%);
-}
-
 
 .picture-large {
   height: 100%;
@@ -272,7 +241,7 @@
 
 .user-picture {
   height: 100%;
-  width: 100%;
+  width: 64px;
 }
 
 .show-page-user-profile {

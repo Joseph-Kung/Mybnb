@@ -43,17 +43,6 @@ lst1 = Listing.create!({
 
 The apartment can sleep 4. The 2 bedrooms have garden view windows. One room with a queen size bed and the second bedroom with two twin size beds. All bed linens are provided.
 
-The eat-in kitchen is equipped with:
-
-(Please note that there is not a full sized built in oven and stovetop in the kitchen)
-
-counter top toaster oven 
-counter top large single burner induction hot plate
-large microwave
-full sized refrigerator 
-washer/dryer 
-electric tea kettle and electric coffee maker
-
 Private bath has a large shower (two shower heads), cherrywood vanity/sink, and a large mirror. Towels and soap/shampoo are provided.
 
 In the Living room area there is cable TV. Free WiFi is available throughout the apartment.
@@ -129,12 +118,7 @@ lst3 = Listing.create!({
   num_beds: 2,
   num_bathrooms: 1,
   price: 120,
-  description: "Come stay at our fully remodeled spacious studio/in-law, that opens onto mature garden, patio and BBQ. Granite countertops in kitchen and bathroom, hardwood floors, featuring live edge breakfast bar and lots of natural light. Bonus room, (walk through room) with futon that converts to queen bed. Seperate entrance from main house. Blocks from the famous Cliff House, Ocean beach and Golden Gate Park. Bus stops outside studio and will take you to downtown S.F.
-
-More information
-The space
-
-We have a queen bed and additional single futon in main studio area, and a queen futon in the bonus room. Both rooms have plenty of built in closet space. The studio features new hardwood floors, remodeled bathroom, remodeled kitchen and opens up onto garden with cottage at back which is usually unoccupied. The washer dryer are on level with studio.Total square footage is 650.",
+  description: "Come stay at our fully remodeled spacious studio/in-law, that opens onto mature garden, patio and BBQ. Granite countertops in kitchen and bathroom, hardwood floors, featuring live edge breakfast bar and lots of natural light. Bonus room, (walk through room) with futon that converts to queen bed. Seperate entrance from main house. Blocks from the famous Cliff House, Ocean beach and Golden Gate Park. Bus stops outside studio and will take you to downtown S.F. We have a queen bed and additional single futon in main studio area, and a queen futon in the bonus room. Both rooms have plenty of built in closet space. The studio features new hardwood floors, remodeled bathroom, remodeled kitchen and opens up onto garden with cottage at back which is usually unoccupied. The washer dryer are on level with studio.Total square footage is 650.",
   private_room: true,
   house: false,
   heater: false,
@@ -162,9 +146,6 @@ lst4 = Listing.create!({
   price: 150,
   description: "Our downstairs studio is like a hotel room with its own entrance, a kitchenette, bathroom and a comfy bed. Our home is close to public transportation and lots of shops, restaurants and parks. It is near the lively Mission district and quaint Cortland Ave. There is easy access to 80, 101 and 280 if you're driving south or east. Its best for 1 or 2 people, but might be able to accommodate a couple with 1 child. A small dog would be okay, but there is no outdoor area.
 
-More information
-The space
-
 The studio is about the size of a small hotel room, with a queen size bed, smart TV you can watch your own streaming service on, breakfast table and chair, a side chair. There is a closet for your use.
 
 The kitchenette includes an under-counter refrigerator, sink, and microwave, as well as an electric kettle and a French press coffee maker. We provide coffee and tea for you to make yourself. There are glasses, mugs, plates and bowls. There is silverware, a can opener, a bottle opener. We provide granola, oatmeal and some light snacks or breakfast items.
@@ -172,7 +153,6 @@ The kitchenette includes an under-counter refrigerator, sink, and microwave, as 
 The shower and toilet are each behind a wall for privacy, and there is a heavy curtain separating the bathroom from the studio. There is a door for the toilet. However, the bathroom is not a completely separate room, so the studio is best for people who are comfortable with one another.
 
 Our studio is cozy and quiet, and with the curtain pulled to cover the glass entry door, it is quite private. There is no outdoor space. There is a smart TV and you can sign into your own streaming TV service.
-
 ",
   private_room: false,
   house: true,
@@ -200,11 +180,7 @@ lst5 = Listing.create!({
   num_beds: 4,
   num_bathrooms: 3,
   price: 60,
-  description: "Welcome to our house! Centrally located in historic Hancock Park, we just short drive away from Hollywood Attractions, Beverly Hills, Grove Shopping Center, Universal Studio, Downtown LA!
-
-More information
-The space
-
+  description: "Welcome to our house! Centrally located in historic Hancock Park, we just short drive away from Hollywood Attractions, Beverly Hills, Grove Shopping Center, Universal Studio, Downtown LA! 
 Located on a first floor of a main house, guest studio has a separate entrance, ‘en-suite’ bathroom, washer, dryer & small kitchenette (Website hidden by Airbnb) *** PLEASE NOTICE: room is SMALL (10 x 12 feet), but has Quinn size bed***
 Little kitchenette has a coffee machine, microwave, electric water kettle, toaster, and all necessary dishes and glasses. I always keep the kitchenette stocked up with coffee, tea, sugar, cream etc. You have full access of the back yard and the pool area to enjoy the warm LA weather and over sized pool. 
 If you rent a car, you can park on a street in front of our house-unrestricted parking 24/7.
@@ -234,52 +210,10 @@ lst6 = Listing.create!({
   num_beds: 3,
   num_bathrooms: 2,
   price: 154,
-  description: "Entire brand new Downtown L.A. flat in Lux complex. FREE Parking, FREE WiFi. Mins to Staples Center, LA Live, Metro 2 blocks away, Convention Center. Walk to all hotspots! Nice bed, Full Kitchen, Pool, Amazing Sundeck, Gym, Lounge
-
-More information
-The space
-
+  description: "Entire brand new Downtown L.A. flat in Lux complex. FREE Parking, FREE WiFi. Mins to Staples Center, LA Live, Metro 2 blocks away, Convention Center. Walk to all hotspots! Nice bed, Full Kitchen, Pool, Amazing Sundeck, Gym, Lounge 
 *Note this apartment is low priced because it is brand new. The price will go up after more reviews.
 
 Welcome to DTLA Lux Flat! All brand new apartment and furniture in an upscale stylish complex! Enjoy the spacious open floor-plan in a lux building located right in the good part of DTLA close to all the hot spots. Walk and take metro everywhere, no car needed!
-
-APARTMENT FEATURES:
-• Sleeps 3
-• You get the entire apartment 
-• Nice Queen Bed + Single Rollaway (Upon request)
-• FREE Parking
-• FREE WiFi 
-• Saline Pool
-• Poolside lounge 
-• Roof deck with cool-down showers. Cheers to that!
-•Controlled-access building
-•Two-level fitness center packed with equipment for strength and cardio training
-•Cardio equipment features personal viewing screens and ipod connectivity
-•Community recreation room with billiards
-•Disappearing glass wall connects recreation room to exterior pool-side lounge
-•Pool-side lounge includes open-air kitchen, cabana seating, water feature and outdoor fireplace
-•Expansive roof-top park with sunning area, deluge shower, heated spa, grilling stations and fire pit
-•Media room
-•Rooftop Big Screen TV
-•100% Non-smoking
-• HD Smart TV 
-• Loft Style
-• Personal Washer Dryer
-• Full Kitchen 
-• Stainless steel appliances 
-• Full Size Refrigerator 
-• Dishwasher, Microwave, Full Size Stove
-• Microwave, Toaster, Coffee Maker
-• Central Air conditioning and Heat 
-• All brand new furniture and apartment 
-• Bathtub 
-• Hand Soap 
-• Shampoo 
-• Cleaned by professional maids
-• Pot, Pan, Dishes, Silverware, Pillows, Towels, Hair Dryer, Iron and Ironing Board, all provided 
-• Elevator
-• Spoken languages: English, Russian, Spanish 
-• Airport pickup available for extra fee
 
 Relax and unwind in our very comfortable queen bed, 800 thread count sheets, and High Quality Comforter.
 *NOTE I also only want excellent guests, who understand that they have to be respectful of my apartment, my neighbors and my building staff.",
@@ -338,9 +272,6 @@ lst8 = Listing.create!({
 The perfect spot for any photo shoot. 
 Beauty. Simplicity. Nature.
 
-More information
-The space
-
 TOP OF THE HILL ACRES will bring you an even more memorable experience this fall and winter. It's also Our favorite time of year. 
 The light is magic!
 We are still in a dry spell, high hazard fire zone at this time of year. The canyon weather is dry and we need to avoid any sparks of any kind.
@@ -356,6 +287,128 @@ Limited wifi is avail for our guests to connect if needed.",
   air_con: true,
   kitchen: true
 })
+
+lst9 = Listing.create!({
+  owner_id: 3,
+  title: 'Penthouse Studio East 50s Terrace',
+  address: '150 W 84th St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10024,
+  latitude: 40.785730,
+  longitude: -73.975180,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 107,
+  description: "This is a fully furnished short term studio apartment in an elevator building on the 6th floor in the heart of midtown Manhattan. Close to all major subway lines- E, M & 6, major landmarks & shopping, 5 star hotels, restaurants & bars, lively area, its the perfect location to explore the city. Located in East 50s between 2nd & 3rd ave. About a 10 minute walk to Times Square, 3 minutes to Rockefeller Center, and 5 minutes to Central Park. Quiet and safe tree lined street with consulates & embassies across the street, police precinct around the corner. Free street parking available after 7 pm until 8 am weekdays and all day on weekends. Includes over 300 cable & premium channels with a flat screen TV, Hi speed wifi Internet. The studio is about 300 square feet in total, with cooking amenities such as mini fridge, microwave, induction unit for cooking, electric kettle, toaster/convection oven, French press coffee maker but no kitchen. There IS an air conditioner and heater that works very well! Silverware, wine glasses, cups & glasses, and plates/bowls are provided. Queen bed with a pillowtop mattress, a second inflatable twin mattress with bedding can be added and also a foldout single futon. Double paned windows with blackout shades, and a sleep sound machine. Walk in closet with plenty of hanging space. Bathroom includes marble walls and floor, full bathtub & shower, hairdryer, steamer, bedding & towels provided. Bamboo floors in bedroom, wall to wall carpet in entry way, and all marble bathroom. Air conditioning and heating, ceiling fan. Private 600 sf terrace with furniture and a grill that is only for the apartment, not the building is located above the unit and accessible by the stairwell outside of the apt. Laundry facilities in the building also. weekly & monthly rental available also. No Pets allowed and no smoking.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst10 = Listing.create!({
+  owner_id: 5,
+  title: 'Luxury Central Park Apartment close to everything',
+  address: '158 W 81st St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10024,
+  latitude: 40.783820,
+  longitude: -73.976480,
+  num_guests: 3,
+  num_rooms: 2,
+  num_beds: 3,
+  num_bathrooms: 2,
+  price: 130,
+  description: "My place is located close to Central Park West and Columbia University. It is very modern and clean. Public transportation just steps away and can take you everywhere in New York City. My place is good for couples,families with kids,business travelers, friends and solo adventurers.
+on 125th street we have one of the best shopping area in NYC. You can find great bargain.
+If you like walking, biking,boating and other sport activities Central Park will be your place.
+COME TO VISIT NEW YORK CITY!!!",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst11 = Listing.create!({
+  owner_id: 6,
+  title: 'Soho 2 Bedroom Private Terrace',
+  address: '156 Wooster St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10012,
+  latitude: 40.726230,
+  longitude: -73.999270,
+  num_guests: 5,
+  num_rooms: 2,
+  num_beds: 3,
+  num_bathrooms: 3,
+  price: 470,
+  description: "PLEASE ENTER YOUR DATES INTO CALENDAR ON THE RIGHT IN ORDER TO SEE THE PRICE FOR YOUR NIGHTS
+
+THIS IS THE MANHATTAN YOU NEVER KNEW EXISTED
+Classic Soho 2 bedroom loft 
+PRIVATE TERRACE accessed directly from your apartment
+Classic views of NY life
+Outdoor Barbecue
+2 full bathrooms
+Soho is the most chic neighborhood in Manhattan and possibly the world. The architecture, the people watching, the shopping and restaurants need no introduction. Even if you don't stay with me definitely stay in SOHO",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst12 = Listing.create!({
+  owner_id: 3,
+  title: 'Luxury 2 Bedroom Empire Loft',
+  address: '1041 6th Ave',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10018,
+  latitude: 40.753300,
+  longitude: -73.985640,
+  num_guests: 4,
+  num_rooms: 2,
+  num_beds: 3,
+  num_bathrooms: 2,
+  price: 465,
+  description: "The grandeur of this 2 bedroom loft compares with only few other properties. The proximity of the Empire State Building form the building's private rooftop will leave you in awe.
+
+Classic Manhattan loft with 14 foot (4.3 meters) ceilings that rarely exists anymore. Designed by a top interior designer and decorated with top of the line finishes and furniture.
+
+More information
+Located in Manhattan's classiest neighborhood. Shopping of Madison and 5th Avenue at your doorstep. Class of Park Avenue at your corner.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+
 
 LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8]
 

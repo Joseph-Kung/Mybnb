@@ -410,7 +410,7 @@ Located in Manhattan's classiest neighborhood. Shopping of Madison and 5th Avenu
 
 
 
-LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8]
+LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12]
 
 LISTINGS.each.with_index do |lst, idx1|
     (1..5).each do |idx2|

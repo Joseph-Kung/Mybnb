@@ -19,7 +19,9 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     <>
     <div className='listing-item-container'>
       <Link to={`/listings/${listing.id}`}>
-            {photo}
+            <div className='photo-container'>
+              {photo}
+            </div>
             <div className='listing-item-details'>
               <span className='listing-type'>{findType()} 	• {listing.city}</span>
               <div className='listing-title'>{listing.title}</div>

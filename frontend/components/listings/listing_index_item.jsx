@@ -11,7 +11,7 @@ const ListingIndexItem = ({listing, fetchListing}) => {
   if (listing.photoUrl) {
     photo = <img className='listing-picture' src={listing.photoUrl} />
   } else {
-    photo = <div className='listing-picture'></div>
+    photo = null;
   }
 
   const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>

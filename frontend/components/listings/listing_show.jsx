@@ -119,6 +119,7 @@ class ListingShow extends React.Component {
                       endDatePlaceholderText={'Check out'}
                       numberOfMonths={1}
                       minimumNights={1}
+                      block={true}
                       // isDayBlocked={true}
                     />
                 </div>
@@ -128,7 +129,7 @@ class ListingShow extends React.Component {
                     <input className='guest-input' type="number" min='1' max={listing.numGuests} onChange={this.handleChange} value={this.state.numGuests}/>
                 </div>
               <div className='form-submit-section'>
-                <button className='book-form-submit'>Request to Book</button>
+                <button className='book-form-submit'>Book</button>
                 <span>You won't be charged yet</span>
               </div>
               </form>

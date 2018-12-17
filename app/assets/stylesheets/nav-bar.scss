@@ -114,7 +114,7 @@
   position: absolute;
   background-color: rgb(255, 255, 255);
   min-width: 282px;
-  height: 300px;
+  min-height: 70px;
   border: 1px solid rgb(235, 235, 235);
   border-top: none;
   top: 80px;
@@ -144,4 +144,27 @@
 
 .profile-pic-container:hover {
   cursor: pointer;
+}
+
+.dropdown-button-last {
+  padding-top: 3px;
+  padding-bottom: 19px;
+  margin: 10px;
+  margin-left: 22px;
+  border-bottom: none;
+  width: 80%;
+  font-size: 14px;
+  color: rgb(118, 118, 118);
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.dropdown-button-last:hover {
+  border-bottom: 1px solid black;
+}
+
+.profile-pic {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }

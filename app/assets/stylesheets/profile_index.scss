@@ -1,0 +1,62 @@
+.profile-container {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-header {
+  color: #484848;
+  padding-top: 25px;
+  font-size: 32px;
+  font-weight: normal;
+  // margin-left: 135px;
+  margin: auto;
+  width: 80%;
+}
+
+.profile-index-item {
+  margin-top: 40px;
+  margin-right: 20px;
+  width: 33%;
+  height: 600px;
+  border: 1px solid lightgray;
+  max-width: 325px;
+}
+
+.profile-index-container {
+  height: 40%;
+}
+
+.owner-profile-picture {
+  background-color: rgb(242, 242, 242);
+  box-shadow: rgb(235, 235, 235) 0px 0px 0px 2px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  left: 133px;
+}
+
+.owner-picture {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.bookings-show-city {
+  font-size: 32px;
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+.profile-image-container {
+  position: relative;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 
 class NavBar extends React.Component {
@@ -45,6 +45,10 @@ class NavBar extends React.Component {
     )
   }
 
+  renderUserShowPage() {
+    <Redirect to={`/profile`} />
+  }
+
   renderLoggedIn () {
     return (
     <div className='nav-bar-container'>
@@ -68,7 +72,8 @@ class NavBar extends React.Component {
               this.state.showDropdown === true ? (
               <div className='dropdown'>
                 <ul>
-                  <li className='dropdown-item'><button className='dropdown-button' onClick={this.props.logout}>Log out</button></li>
+                  <Link to={`/profile/${this.props.currentUser.id}`}><li className='dropdown-item'><button className='dropdown-button'>Trips</button></li></Link>
+                  <li className='dropdown-item'><button className='dropdown-button-last' onClick={this.props.logout}>Log out</button></li>
                 </ul>
               </div>
               ) : null
@@ -76,7 +81,6 @@ class NavBar extends React.Component {
             
           </div>
         </div>
-        {/* <button className='nav-bar-button' onClick={this.props.logout}>Log out</button> */}
       </div>
     </div>
     )

@@ -242,8 +242,9 @@
 }
 
 .user-picture {
+  object-fit: cover;
   height: 100%;
-  width: 64px;
+  width: 100%;
 }
 
 .show-page-user-profile {

@@ -83,7 +83,6 @@ class NavBar extends React.Component {
   }
 
   render () {
-    console.log(this.state)
     let contents;
     if (this.props.currentUser === undefined) {
       contents = this.renderLoggedOut()

@@ -10,6 +10,10 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Listing
 
+  has_many :bookings,
+    foreign_key: :renter_id,
+    class_name: :Booking
+
   has_one_attached :photo
 
   def password=(password)

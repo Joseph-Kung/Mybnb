@@ -3,7 +3,7 @@ import * as listingApiUtil from '../../util/listing_api_util';
 export const RECEIVE_LISTINGS = 'RECEIVE_LISTINGS';
 export const RECEIVE_LISTING = 'RECEIVE_LISTING';
 export const REMOVE_LISTING = 'REMOVE_LISTING';
-export const RECEIVE_LISTING_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_LISTING_ERRORS = 'RECEIVE_LISTING_ERRORS';
 export const CLEAR_LISTINGS_ERRORS = 'CLEAR_LISTINGS_ERRORS';
 export const START_LOADING = 'START_LOADING';
 

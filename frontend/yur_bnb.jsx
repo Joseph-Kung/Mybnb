@@ -6,7 +6,7 @@ import 'react-dates/initialize';
 
 
 //TEST
-import { fetchUserBookings, fetchListingBookings, createBooking, updateBooking, deleteBooking } from './util/booking_api_util';
+import { fetchUserBookings, fetchListingBookings, createBooking, updateBooking, deleteBooking } from './actions/bookings/booking_actions';
 import { create } from 'domain';
 //TEST
 

@@ -3,7 +3,7 @@ class Api::BookingsController < ApplicationController
     if params[:listing_id]
       @bookings = Listing.find(params[:listing_id]).bookings
     else
-      @bookings = current_user.bookings
+      @bookings = User.find(params[:id]).bookings
     end
 
     render :index
@@ -11,7 +11,6 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.renter_id = current_user.id
 
     if @booking.save
       render :show

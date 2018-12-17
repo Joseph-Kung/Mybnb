@@ -34,18 +34,20 @@ class ListingsIndex extends React.Component {
         <header>
           <NavBarContainer />
         </header>
-        <div className='spacer'></div>
-        <div><h3 className='where-to-stay'>Homes in San Francisco</h3></div>
-        <div className='listings-index-container'>
-            {sf}
-        </div>
-        <div><h3 className='where-to-stay'>Homes in Los Angeles</h3></div>
-        <div className='listings-index-container'>
-            {la}
-        </div>
-        <div><h3 className='where-to-stay'>Homes in New York</h3></div>
-        <div className='listings-index-container'>
-            {ny}
+        <div>
+          <div className='spacer'></div>
+          <div><h3 className='where-to-stay'>Homes in San Francisco</h3></div>
+          <div className='listings-index-container'>
+              {sf}
+          </div>
+          <div><h3 className='where-to-stay'>Homes in Los Angeles</h3></div>
+          <div className='listings-index-container'>
+              {la}
+          </div>
+          <div><h3 className='where-to-stay'>Homes in New York</h3></div>
+          <div className='listings-index-container'>
+              {ny}
+          </div>
         </div>
       </>
       );

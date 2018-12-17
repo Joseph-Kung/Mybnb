@@ -13,7 +13,7 @@
 }
 
 .nav-bar-button:hover {
-  border-bottom: 4px solid black;
+  border-bottom: 2px solid #A6000000;
 }
 
 .logo {
@@ -44,7 +44,7 @@
 }
 
 .link-button:hover {
-  border-bottom: 4px solid black;
+  border-bottom: 2px solid black;
 }
 
 .links-container {
@@ -86,4 +86,59 @@
   height: 1px;
   border-bottom: 1px solid #EBEBEB;
   padding-bottom: 5px;
+}
+
+.profile-pic-container {
+  background-color: rgb(242, 242, 242);
+  box-shadow: rgb(235, 235, 235) 0px 0px 0px 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav-bar-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  margin: 0px 5px;
+  margin-right: 10px;
+}
+
+.nav-bar-profile:hover {
+  border-bottom: 2px solid gray;
+}
+
+.dropdown {
+  display: hidden;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  min-width: 282px;
+  height: 300px;
+  border: 1px solid rgb(235, 235, 235);
+  border-top: none;
+  top: 80px;
+  right: 11px;
+  z-index: 3;
+}
+
+.dropdown li {
+  display: flex;
+}
+
+.dropdown-button {
+  padding-top: 8px;
+  padding-bottom: 19px;
+  margin: 10px;
+  margin-left: 22px;
+  border-bottom: 1px solid darkgray;
+  width: 80%;
+  font-size: 14px;
+  color: rgb(118, 118, 118);
+  font-weight: 600;
+}
+
+.dropdown-button:hover {
+  border-bottom: 1px solid black;
 }

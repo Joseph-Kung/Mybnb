@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2018_12_16_235200) do
     t.integer "listing_id", null: false
     t.integer "renter_id", null: false
     t.integer "num_guests", null: false
-    t.datetime "start_date", null: false
-    t.datetime "end_date", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["listing_id"], name: "index_bookings_on_listing_id"

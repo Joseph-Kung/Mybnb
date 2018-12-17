@@ -5,7 +5,7 @@ class Api::ListingsController < ApplicationController
     if @listing.save
       render :show
     else
-      render json: @listing.errors.full_messages
+      render json: @listing.errors.full_messages, status: 400
     end
   end
 
@@ -15,7 +15,7 @@ class Api::ListingsController < ApplicationController
     if @listing
       render :show
     else
-      render json: ['Listing does not exist']
+      render json: ['Listing does not exist'], status: 400
     end
   end
 
@@ -29,7 +29,7 @@ class Api::ListingsController < ApplicationController
     if @listing.delete
       render :show
     else
-      render json: ['Something went wrong']
+      render json: ['Something went wrong'], status: 400
     end
   end
 

@@ -8,4 +8,14 @@ class Booking < ApplicationRecord
   belongs_to :renter,
     foreign_key: :renter_id,
     class_name: :User
+
+  def valid_dates?
+    if self.start_date && self.end_date
+      current_requests = Booking
+        .where(listing_id: self.listing_id)
+        .where.not('end_date < ? OR start_date > ?', self.start_date, self.end_date)
+      return false if current_requests.empty?
+    end
+    return true
+  end
 end

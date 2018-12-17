@@ -7,6 +7,7 @@ import LargePictures from '../pictures/large_pictures';
 import SmallPictures from '../pictures/small_pictures';
 import BookingFormContainer from '../booking/booking_form_container';
 import PulseLoader from '../dot_loader';
+import { runInThisContext } from 'vm';
 
 class ListingShow extends React.Component {
   constructor (props) {
@@ -14,6 +15,7 @@ class ListingShow extends React.Component {
     this.state = {startDate: null, endDate: null, numGuests: 1}
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.isDateBooked = this.isDateBooked.bind(this);
   }
 
   handleChange(e) {
@@ -22,12 +24,50 @@ class ListingShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.props.currentUserId) {
+      this.props.createBooking({listing_id: this.props.listing.id,
+                          renter_id: this.props.currentUserId,
+                          num_guests: this.state.numGuests,
+                          start_date: this.state.startDate.format('DD/MM/YYYY'),
+                          end_date: this.state.endDate.format('DD/MM/YYYY')})
+    } else {
+      this.props.openModal()
+    }
   }
 
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
+    this.props.fetchListingBookings(this.props.match.params.listingId);
   }
 
+  isDateBooked (date) {
+    let reqDate = new Date(date);
+    let today = new Date();
+    let startDate;
+    let endDate;
+    // if (reqDate < today) {
+    //   return true
+    // }
+    for (let i = 0; i < this.props.bookings.length; i++) {
+      startDate = new Date(this.props.bookings[i].startDate)
+      endDate = new Date(this.props.bookings[i].endDate)
+      if (reqDate >= startDate && reqDate <= endDate) {
+        return true
+      }
+    }
+    return false
+  }
+
+  isOutside (date) {
+    let newDate = new Date(date);
+    let today = new Date();
+
+    if (newDate < today) {
+      return true
+    }
+    return false
+  }
+  
   render() {
     if (this.props.loading === true) {
       return (
@@ -77,7 +117,6 @@ class ListingShow extends React.Component {
       }
     
       const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
-
       return (
         <>
         <header>
@@ -117,10 +156,11 @@ class ListingShow extends React.Component {
                       onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                       startDatePlaceholderText={'Check in'}
                       endDatePlaceholderText={'Check out'}
+                      // isOutsideRange={day => !isInclusivelyAfterDay(day, moment())}
                       numberOfMonths={1}
                       minimumNights={1}
                       block={true}
-                      // isDayBlocked={true}
+                      isDayBlocked={day => this.isDateBooked(day)}
                     />
                 </div>
                 <span>Guests</span>
@@ -207,7 +247,9 @@ class ListingShow extends React.Component {
                     numberOfMonths={2}
                     hideKeyboardShortcutsPanel={true}
                     minimumNights={1}
-                    // isDayBlocked={}
+                    isDayBlocked={day => this.isDateBooked(day)}
+                    enableOutsideDays={false}
+                    isOutsideRange={date => this.isOutside(date)}
                   />
               </div>
             </div>

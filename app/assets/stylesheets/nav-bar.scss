@@ -111,7 +111,6 @@
 }
 
 .dropdown {
-  display: hidden;
   position: absolute;
   background-color: rgb(255, 255, 255);
   min-width: 282px;
@@ -141,4 +140,8 @@
 
 .dropdown-button:hover {
   border-bottom: 1px solid black;
+}
+
+.profile-pic-container:hover {
+  cursor: pointer;
 }

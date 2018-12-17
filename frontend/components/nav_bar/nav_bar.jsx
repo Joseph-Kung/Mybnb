@@ -7,6 +7,20 @@ class NavBar extends React.Component {
     super(props);
     this.renderLoggedOut = this.renderLoggedOut.bind(this);
     this.renderLoggedIn = this.renderLoggedIn.bind(this);
+    this.showDropdown = this.showDropdown.bind(this);
+    this.closeDropdown = this.closeDropdown.bind(this);
+    this.state = {showDropdown: false}
+  }
+
+  closeDropdown () {
+    this.setState({showDropdown: false})
+    document.removeEventListener('click', this.closeDropdown);
+  }
+
+  showDropdown (e) {
+    e.preventDefault();
+    this.setState({showDropdown: true})
+    document.addEventListener('click', this.closeDropdown)
   }
 
   renderLoggedOut () {
@@ -46,15 +60,21 @@ class NavBar extends React.Component {
       <div className='links-container'>
         <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
         <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
-        <div className='nav-bar-profile'>
-          <button className='profile-pic-container' onClick={this.showDropdown}>
+        <div className='nav-bar-profile' onClick={this.showDropdown}>
+          <div className='profile-pic-container' onClick={this.showDropdown}>
             <img src={this.props.currentUser.userPhoto} className='profile-pic' />
-            <div className='dropdown'>
-              <ul>
-                <li className='dropdown-item'><button className='dropdown-button' onClick={this.props.logout}>Log out</button></li>
-              </ul>
-            </div>
-          </button>
+
+            {
+              this.state.showDropdown === true ? (
+              <div className='dropdown'>
+                <ul>
+                  <li className='dropdown-item'><button className='dropdown-button' onClick={this.props.logout}>Log out</button></li>
+                </ul>
+              </div>
+              ) : null
+            }
+            
+          </div>
         </div>
         {/* <button className='nav-bar-button' onClick={this.props.logout}>Log out</button> */}
       </div>
@@ -63,6 +83,7 @@ class NavBar extends React.Component {
   }
 
   render () {
+    console.log(this.state)
     let contents;
     if (this.props.currentUser === undefined) {
       contents = this.renderLoggedOut()

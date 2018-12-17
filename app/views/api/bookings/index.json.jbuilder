@@ -10,7 +10,8 @@
       json.ownerPicture url_for(booking.listing.owner.photo)
     end
 
-    json.city booking.listing.city
-    json.title booking.listing.title
+    json.listingCity booking.listing.city
+    json.listingTitle booking.listing.title
+    json.listingId booking.listing.id
   end
 end

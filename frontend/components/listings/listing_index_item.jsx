@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ListingIndexItemSlider from './listing-slider';
+import Carousel from 'nuka-carousel';
 
 const ListingIndexItem = ({listing, fetchListing}) => {
   const findType = () => {
@@ -8,12 +9,22 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     return 'Whole House';
   }
 
-  // let photo;
-  // if (listing.photoUrl) {
-  //   photo = <img className='listing-picture' src={listing.photoUrl} />
-  // } else {
-  //   photo = null;
-  // }
+  const slider = () => {
+    if (listing.photoUrls) {
+      return (
+        <Carousel disableKeyboardControls={true}>
+          <img className='listing-picture' src={listing.photoUrls[0]} />
+          <img className='listing-picture' src={listing.photoUrls[1]} />
+          <img className='listing-picture' src={listing.photoUrls[2]} />
+          <img className='listing-picture' src={listing.photoUrls[3]} />
+        </Carousel>
+      )
+    } else {
+      return null;
+  }
+}
+
+  
 
   const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
   return (
@@ -21,7 +32,7 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     <div className='listing-item-container'>
       <Link to={`/listings/${listing.id}`}>
             <div className='photo-container'>
-              <ListingIndexItemSlider listing={listing} />
+            {slider()}
             </div>
             <div className='listing-item-details'>
               <span className='listing-type'>{findType()} 	• {listing.city}</span>

@@ -60,3 +60,23 @@
 .profile-image-container {
   position: relative;
 }
+
+.booking-info-show {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.booking-listing-title {
+  display: block;
+  margin: 0px 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.booking-listing-title:hover {
+  text-decoration: underline;
+}

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProfileIndex from './profile_index';
-import { fetchUserBookings } from '../../actions/bookings/booking_actions';
+import { fetchUserBookings, deleteBooking } from '../../actions/bookings/booking_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.entities.users[ownProps.match.params.userId],
@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchUserBookings: userId => dispatch(fetchUserBookings(userId)),
+  deleteBooking: bookingId => dispatch(deleteBooking(bookingId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileIndex);

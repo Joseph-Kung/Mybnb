@@ -12,7 +12,7 @@ class ProfileIndex extends React.Component {
   }
 
   render () {
-    let bookings = this.props.bookings.map(booking => <ProfileIndexItem key={booking.id} booking={booking} />)
+    let bookings = this.props.bookings.map(booking => <ProfileIndexItem key={booking.id} deleteBooking={this.props.deleteBooking} booking={booking} />)
     return(
       <>
         <header>

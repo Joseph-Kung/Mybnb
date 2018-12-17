@@ -19,12 +19,15 @@
   padding: 10px;
   height: 100%;
   width: 23%;
+  object-fit: cover;
 }
 
 .listing-picture {
   background-size: cover;
   height: 100%;
   width: 100%;
+  max-height: 250px;
+  min-height: 250px;
 }
 
 .where-to-stay {
@@ -49,4 +52,8 @@
 
 .listing-type {
   font-size: 12px;
+}
+
+.slider-controller-bottomcenter {
+  bottom: -20px;
 }

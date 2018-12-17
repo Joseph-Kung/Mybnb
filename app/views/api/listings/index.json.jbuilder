@@ -3,7 +3,7 @@
     json.extract! listing, :id, :title, :city, :house, :private_room, :price
 
     if listing.photos.attached?
-      json.photoUrl url_for(listing.photos.first)
+      json.photoUrls listing.photos.map { |file| url_for(file)}
     end
   end
 end

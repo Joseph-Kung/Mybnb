@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ListingIndexItemSlider from './listing-slider';
 
 const ListingIndexItem = ({listing, fetchListing}) => {
   const findType = () => {
@@ -7,12 +8,12 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     return 'Whole House';
   }
 
-  let photo;
-  if (listing.photoUrl) {
-    photo = <img className='listing-picture' src={listing.photoUrl} />
-  } else {
-    photo = null;
-  }
+  // let photo;
+  // if (listing.photoUrl) {
+  //   photo = <img className='listing-picture' src={listing.photoUrl} />
+  // } else {
+  //   photo = null;
+  // }
 
   const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
   return (
@@ -20,7 +21,7 @@ const ListingIndexItem = ({listing, fetchListing}) => {
     <div className='listing-item-container'>
       <Link to={`/listings/${listing.id}`}>
             <div className='photo-container'>
-              {photo}
+              <ListingIndexItemSlider listing={listing} />
             </div>
             <div className='listing-item-details'>
               <span className='listing-type'>{findType()} 	• {listing.city}</span>

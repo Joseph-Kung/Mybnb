@@ -1,5 +1,5 @@
 import React from 'react';
-
+import MarkerManager from '../../util/marker_manager';
 
 class SearchMap extends React.Component {
 
@@ -10,6 +10,12 @@ class SearchMap extends React.Component {
     };
     
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager.updateMarkers(this.props.listings)
+  }
+
+  componentDidUpdate () {
+    this.MarkerManager.updateMarkers(this.props.listings)
   }
 
   render () {

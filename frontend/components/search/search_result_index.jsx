@@ -7,6 +7,10 @@ class SearchResultIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount () {
+    this.props.fetchListings();
+  }
+
   render() {
     return(
       <>
@@ -16,8 +20,7 @@ class SearchResultIndex extends React.Component {
         <div className='search-result-container'>
           <div className='results-container'>
           </div>
-
-            <SearchMap />
+            <SearchMap listings={this.props.listings}/>
         </div>
       </>
     )

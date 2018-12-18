@@ -35,9 +35,9 @@ export const clearErrors = () => ({
   type: CLEAR_LISTINGS_ERRORS,
 });
 
-export const fetchListings = () => (dispatch) => {
+export const fetchListings = filters => (dispatch) => {
   dispatch(startLoading());
-  return (listingApiUtil.fetchListings()
+  return (listingApiUtil.fetchListings(filters)
     .then(listings => dispatch(receiveListings(listings))));
 };
 

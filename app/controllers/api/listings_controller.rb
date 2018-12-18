@@ -22,6 +22,7 @@ class Api::ListingsController < ApplicationController
   def index
     if params[:bounds]
       @listings = Listing.all.select {|listing| listing.in_bounds(params[:bounds])}
+      render :index
     else 
       @listings = Listing.all
       render :index

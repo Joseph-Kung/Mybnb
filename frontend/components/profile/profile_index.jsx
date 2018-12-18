@@ -18,7 +18,7 @@ class ProfileIndex extends React.Component {
         <header>
           <NavBarContainer />
         </header>
-          <h2 className='profile-header'>Past Trips</h2>
+          <h2 className='profile-header'>Booked Trips</h2>
         <div className='profile-container'>
           {bookings}
         </div>

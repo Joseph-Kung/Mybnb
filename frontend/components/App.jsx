@@ -7,6 +7,7 @@ import Modal from './modal/modal';
 import ListingsIndexContainer from './listings/listings_index_container';
 import ListingShowContainer from './listings/listing_show_container'
 import ProfileIndexContainer from './profile/profile_index_container'
+import SearchResultIndex from './search/search_result_index';
 
 const App = () => (
   <div>
@@ -15,6 +16,7 @@ const App = () => (
     <Route path='/listings/:listingId' component={ListingShowContainer} />
     <Route path='/profile/:userId' component={ProfileIndexContainer} />
     <Route path='/listings' component={ListingsIndexContainer} />
+    <Route path='/search' component={SearchResultIndex} />
     <Route exact path='/' component={LandingPage} />
     <Redirect to='/' />
     </Switch>

@@ -1,0 +1,29 @@
+import React from 'react';
+import NavBarContainer from '../nav_bar/nav_bar_container';
+import SearchMap from '../map/search_map';
+
+class SearchResultIndex extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <>
+        <header>
+          <NavBarContainer />
+        </header>
+        <div className='search-result-container'>
+          <div className='results-container'>
+          </div>
+
+          <div id='map-container' ref='map'>
+          <SearchMap />
+          </div>
+        </div>
+      </>
+    )
+  }
+}
+
+export default SearchResultIndex;

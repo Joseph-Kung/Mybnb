@@ -24,7 +24,6 @@ class ListingShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.props)
     if (this.props.currentUserId) {
       this.props.createBooking({listing_id: this.props.listing.id,
                           renter_id: this.props.currentUserId,
@@ -35,7 +34,6 @@ class ListingShow extends React.Component {
     } else {
       this.props.openModal()
     }
-    console.log(this.props)
   }
 
   componentDidMount() {
@@ -45,6 +43,12 @@ class ListingShow extends React.Component {
 
   componentWillUnmount() {
     this.props.clearErrors();
+  }
+
+  componentDidUpdate (prevProps) {
+    if (this.props.bookings.length > prevProps.bookings.length) {
+      this.props.history.push(`/profile/${this.props.currentUserId}`)
+    }
   }
 
   renderButton () {

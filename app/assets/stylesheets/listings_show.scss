@@ -61,7 +61,7 @@
   position: sticky;
   top: 20px;
   width: 376px;
-  height: 390px;
+  height: 40%;
   padding: 0px 24px;
   border: 1px solid #e4e4e4;
   background-color: white;
@@ -216,6 +216,8 @@
   line-height: 16px;
   font-weight: 600;
   margin-top: 5px;
+  display: block;
+  padding-bottom: 10px;
 }
 
 .small-pictures-container {

@@ -168,3 +168,10 @@
   height: 100%;
   width: 100%;
 }
+
+.profile-pic-default {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-image: image-url('doge.jpg')
+}

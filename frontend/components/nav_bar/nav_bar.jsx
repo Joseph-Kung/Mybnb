@@ -9,8 +9,10 @@ class NavBar extends React.Component {
     this.renderLoggedIn = this.renderLoggedIn.bind(this);
     this.showDropdown = this.showDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
+    this.renderProfilePic = this.renderProfilePic.bind(this);
     this.state = {showDropdown: false}
   }
+
 
   closeDropdown () {
     this.setState({showDropdown: false})
@@ -49,6 +51,14 @@ class NavBar extends React.Component {
     <Redirect to={`/profile`} />
   }
 
+  renderProfilePic () {
+    if (this.props.currentUser.userPhoto) {
+      return <img src={this.props.currentUser.userPhoto} className='profile-pic' />
+    } else {
+      return <div className='profile-pic-default' />
+    }
+  }
+
   renderLoggedIn () {
     return (
     <div className='nav-bar-container'>
@@ -66,7 +76,7 @@ class NavBar extends React.Component {
         <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
         <div className='nav-bar-profile' onClick={this.showDropdown}>
           <div className='profile-pic-container' onClick={this.showDropdown}>
-            <img src={this.props.currentUser.userPhoto} className='profile-pic' />
+            {this.renderProfilePic()}
 
             {
               this.state.showDropdown === true ? (

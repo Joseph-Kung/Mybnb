@@ -17,9 +17,7 @@ class SearchResultIndex extends React.Component {
           <div className='results-container'>
           </div>
 
-          <div id='map-container' ref='map'>
-          <SearchMap />
-          </div>
+            <SearchMap />
         </div>
       </>
     )

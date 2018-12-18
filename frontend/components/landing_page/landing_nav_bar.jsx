@@ -10,6 +10,7 @@ class LandingNavBar extends React.Component {
     this.showDropdown = this.showDropdown.bind(this);
     this.closeDropdown = this.closeDropdown.bind(this);
     this.renderUserShowPage = this.renderUserShowPage.bind(this);
+    this.renderProfilePic = this.renderProfilePic.bind(this);
     this.state = { showDropdown: false }
   }
 
@@ -42,6 +43,14 @@ class LandingNavBar extends React.Component {
     )
   }
 
+  renderProfilePic() {
+    if (this.props.currentUser.userPhoto) {
+      return <img src={this.props.currentUser.userPhoto} className='profile-pic' />
+    } else {
+      return <div className='profile-pic-default' />
+    }
+  }
+
   renderUserShowPage ()  {
     <Redirect to={`/profile`} />
   }
@@ -58,7 +67,7 @@ class LandingNavBar extends React.Component {
         <a className='landing-link-button' href="https://github.com/Joseph-Kung"><div className='landing-github'></div></a>
         <div className='landing-nav-bar-profile' onClick={this.showDropdown}>
           <div className='landing-profile-pic-container' onClick={this.showDropdown}>
-            <img src={this.props.currentUser.userPhoto} className='profile-pic' />
+            {this.renderProfilePic()}
 
             {
               this.state.showDropdown === true ? (

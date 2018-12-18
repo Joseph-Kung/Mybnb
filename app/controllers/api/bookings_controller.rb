@@ -12,10 +12,11 @@ class Api::BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if @booking.save && @booking.valid_dates?
+    if @booking.valid_dates?
+      @booking.save
       render :show
     else
-      render @booking.errors.full_messages.concat(["Your requested dates overlap with another booking"]), status: 400
+      render json: ["Your requested dates overlap with another booking"], status: 400
     end
   end
 

@@ -61,7 +61,7 @@
   position: sticky;
   top: 20px;
   width: 376px;
-  height: 374px;
+  height: 390px;
   padding: 0px 24px;
   border: 1px solid #e4e4e4;
   background-color: white;
@@ -284,6 +284,7 @@
   border: 1px solid rgb(235, 235, 235);
   font-size: 20px;
   font-weight: normal;
+  padding-left: 20px;
 }
 
 .spinner-body {
@@ -292,7 +293,11 @@
   justify-content: center;
 }
 
-// .spinner {
-//   height: 100%;
-//   width: 100%;
-// }
+.booking-spinner-body {
+  display: flex;
+  justify-content: center;
+}
+
+.booking-spinner-container {
+  padding-bottom: 50px;
+}

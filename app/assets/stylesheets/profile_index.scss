@@ -19,7 +19,7 @@
   margin-top: 40px;
   margin-right: 20px;
   width: 33%;
-  height: 600px;
+  min-height: 250px;
   border: 1px solid lightgray;
   max-width: 325px;
 }
@@ -36,8 +36,8 @@
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  top: 190px;
-  left: 133px;
+  top: 80%;
+  left: 40%;
 }
 
 .owner-picture {
@@ -79,4 +79,28 @@
 
 .booking-listing-title:hover {
   text-decoration: underline;
+}
+
+.delete-booking {
+  margin: auto;
+  background: rgb(255, 90, 95);
+  border-radius: 4px;
+  border-width: 2px;
+  color: white;
+  width: 80%;
+  text-align: center;
+  padding: 10px 0;
+  padding-right: 3px;
+  margin-bottom: 25px;
+}
+
+.button-container {
+  display: flex;
+  margin: 20px;
+}
+
+.booking-line-space {
+  border-top: 1px solid #EBEBEB;
+  margin: auto;
+  width: 80%;
 }

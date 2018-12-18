@@ -40,7 +40,12 @@ class ProfileIndexItem extends React.Component {
         <div>
           <Link to={`/listings/${booking.listingId}`}><span className='booking-listing-title'>{booking.listingTitle}</span></Link>
         </div>
-        <button className='delete-booking' onClick={this.handleSubmit}></button>
+        <div className='line-space-container'>
+          <div className='booking-line-space' />
+        </div>
+        <div className='button-container'>
+          <button className='delete-booking' onClick={this.handleSubmit}>Delete Booking</button>
+        </div>
       </div>
     )
   }

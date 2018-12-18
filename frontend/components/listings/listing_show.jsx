@@ -24,15 +24,18 @@ class ListingShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.props)
     if (this.props.currentUserId) {
       this.props.createBooking({listing_id: this.props.listing.id,
                           renter_id: this.props.currentUserId,
                           num_guests: this.state.numGuests,
                           start_date: this.state.startDate.format('DD/MM/YYYY'),
-                          end_date: this.state.endDate.format('DD/MM/YYYY')})
+        end_date: this.state.endDate.format('DD/MM/YYYY')
+      })
     } else {
       this.props.openModal()
     }
+    console.log(this.props)
   }
 
   componentDidMount() {
@@ -40,14 +43,31 @@ class ListingShow extends React.Component {
     this.props.fetchListingBookings(this.props.match.params.listingId);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
+  renderButton () {
+    if (this.props.bookingLoading === true) {
+      return (
+        <div className='booking-spinner-container'>
+          <div className='booking-spinner-body'>
+            <PulseLoader loading={this.props.bookingLoading} />
+          </div>
+        </div>
+      )
+    } else {
+      return <button className='book-form-submit'>Request to Book</button>
+    }
+  }
+
+
   isDateBooked (date) {
     let reqDate = new Date(date);
-    let today = new Date();
     let startDate;
     let endDate;
-    // if (reqDate < today) {
-    //   return true
-    // }
+
+
     for (let i = 0; i < this.props.bookings.length; i++) {
       startDate = new Date(this.props.bookings[i].startDate)
       endDate = new Date(this.props.bookings[i].endDate)
@@ -83,6 +103,7 @@ class ListingShow extends React.Component {
         </>
       )
     }
+    const errors = this.props.errors.map(error => <li className='session-error' key={error}>{error}</li>)
     const { listing } = this.props;
     let kitchen, parking, tv, wifi, air_con, pool, heater;
     if (listing) {
@@ -160,6 +181,7 @@ class ListingShow extends React.Component {
                       numberOfMonths={1}
                       minimumNights={1}
                       block={true}
+                      required={true}
                       isDayBlocked={day => this.isDateBooked(day)}
                     />
                 </div>
@@ -169,7 +191,10 @@ class ListingShow extends React.Component {
                     <input className='guest-input' type="number" min='1' max={listing.numGuests} onChange={this.handleChange} value={this.state.numGuests}/>
                 </div>
               <div className='form-submit-section'>
-                <button className='book-form-submit'>Book</button>
+                  <ul className='errors-container'>
+                    {errors}
+                  </ul>
+                {this.renderButton()}
                 <span>You won't be charged yet</span>
               </div>
               </form>

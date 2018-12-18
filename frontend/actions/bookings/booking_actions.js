@@ -5,7 +5,7 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const DELETE_BOOKING = 'DELETE_BOOKING';
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 export const CLEAR_BOOKING_ERRORS = 'CLEAR_BOOKING_ERRORS';
-export const START_LOADING = 'START_LOADING';
+export const START_BOOKING_LOADING = 'START_BOOKING_LOADING';
 
 const receiveBookings = bookings => ({
   type: RECEIVE_BOOKINGS,
@@ -28,7 +28,7 @@ const receiveErrors = errors => ({
 });
 
 export const startLoading = () => ({
-  type: START_LOADING,
+  type: START_BOOKING_LOADING,
 });
 
 export const clearErrors = () => ({
@@ -36,33 +36,25 @@ export const clearErrors = () => ({
 });
 
 
-export const fetchUserBookings = userId => (dispatch) => {
-  dispatch(startLoading());
-  return (
-    bookingAPIUtils.fetchUserBookings(userId).then(bookings => dispatch(receiveBookings(bookings)))
-  );
-};
+export const fetchUserBookings = userId => dispatch => (
+  bookingAPIUtils.fetchUserBookings(userId).then(bookings => dispatch(receiveBookings(bookings)))
+);
 
-export const fetchListingBookings = listingId => (dispatch) => {
-  dispatch(startLoading());
-  return (
-    bookingAPIUtils.fetchListingBookings(listingId).then(bookings => dispatch(receiveBookings(bookings)))
-  );
-};
+export const fetchListingBookings = listingId => dispatch => (
+  bookingAPIUtils.fetchListingBookings(listingId).then(bookings => dispatch(receiveBookings(bookings)))
+);
 
 export const createBooking = booking => (dispatch) => {
   dispatch(startLoading());
-  return (
-    bookingAPIUtils.createBooking(booking).then(newBooking => dispatch(receiveBooking(newBooking)),
-      errors => dispatch(receiveErrors(errors)))
-  );
+  return (bookingAPIUtils.createBooking(booking).then(newBooking => dispatch(receiveBooking(newBooking)),
+    errors => dispatch(receiveErrors(errors.responseJSON))));
 };
 
 export const updateBooking = booking => (dispatch) => {
   dispatch(startLoading());
   return (
     bookingAPIUtils.updateBooking(booking).then(newBooking => dispatch(receiveBooking(newBooking)),
-      errors => dispatch(receiveErrors(errors)))
+      errors => dispatch(receiveErrors(errors.responseJSON)))
   );
 };
 

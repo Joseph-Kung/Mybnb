@@ -5,7 +5,7 @@ import PulseLoader from '../dot_loader';
 
 class ListingsIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchListings();
+    this.props.fetchListings(this.props.filters);
   }
 
   render() {

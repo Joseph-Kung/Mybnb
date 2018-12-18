@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
     tokyo,
     la,
     paris,
+    filters: state.ui.filters,
   };
 };
 

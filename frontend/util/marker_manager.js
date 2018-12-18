@@ -10,15 +10,16 @@ export default class MarkerManager {
       listingsHash[listing.id] = listing;
     });
 
-    Object.keys(this.markers)
-      .filter(listingId => !listingsHash[listingId])
-      .forEach(marker => this.removeMarker(marker));
 
     listings.forEach((listing) => {
       if (this.markers[listing.id] === undefined) {
         this.createMarkerFromBench(listing);
       }
     });
+
+    Object.keys(this.markers)
+      .filter(listingId => !listingsHash[listingId])
+      .map(marker => this.removeMarker(marker));
   }
 
   createMarkerFromBench(listing) {
@@ -31,8 +32,8 @@ export default class MarkerManager {
     this.markers[listing.id].setMap(this.map);
   }
 
-  removeMarker(marker) {
-    this.markers[marker.listingId].setMap(null);
-    delete this.markers[marker.listingId];
+  removeMarker(markerId) {
+    this.markers[markerId].setMap(null);
+    delete this.markers[markerId];
   }
 }

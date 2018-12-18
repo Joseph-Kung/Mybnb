@@ -24,7 +24,7 @@ class Api::ListingsController < ApplicationController
       @listings = Listing.all.select {|listing| listing.in_bounds(params[:bounds])}
       render :index
     else 
-      @listings = Listing.all
+      @listings = Listing.with_attached_photos.all
       render :index
     end
   end

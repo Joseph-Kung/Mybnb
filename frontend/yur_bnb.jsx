@@ -7,6 +7,7 @@ import 'react-dates/initialize';
 
 //TEST
 import { fetchUserBookings, fetchListingBookings, createBooking, updateBooking, deleteBooking } from './actions/bookings/booking_actions';
+import { fetchListings } from './util/listing_api_util';
 import { create } from 'domain';
 //TEST
 
@@ -28,13 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
 
   //TEST
-  // window.fetchUserBookings = fetchUserBookings;
-  // window.fetchListingBookings = fetchListingBookings;
-  // window.createBooking = createBooking;
-  // window.updateBooking = updateBooking;
-  // window.deleteBooking = deleteBooking;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.fetchUserBookings = fetchUserBookings;
+  window.fetchListingBookings = fetchListingBookings;
+  window.createBooking = createBooking;
+  window.updateBooking = updateBooking;
+  window.deleteBooking = deleteBooking;
+  window.fetchListings = fetchListings;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   //TEST
 
   ReactDOM.render(<Root store={store} />, root)

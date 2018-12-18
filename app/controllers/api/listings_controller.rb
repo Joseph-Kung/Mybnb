@@ -20,8 +20,12 @@ class Api::ListingsController < ApplicationController
   end
 
   def index
-    @listings = Listing.all
-    render :index
+    if params[:bounds]
+      @listings = Listing.all.select {|listing| listing.in_bounds(params[:bounds])}
+    else 
+      @listings = Listing.all
+      render :index
+    end
   end
 
   def destroy

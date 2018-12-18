@@ -1,7 +1,8 @@
-export const fetchListings = () => (
+export const fetchListings = bounds => (
   $.ajax({
     method: 'GET',
     url: 'api/listings',
+    data: { bounds },
   })
 );
 

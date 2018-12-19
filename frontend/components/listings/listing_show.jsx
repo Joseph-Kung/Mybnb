@@ -6,7 +6,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import LargePictures from '../pictures/large_pictures';
 import SmallPictures from '../pictures/small_pictures';
 import BookingFormContainer from '../booking/booking_form_container';
-// import PulseLoader from '../dot_loader';
+import ShowMap from '../map/show_map';
 import { runInThisContext } from 'vm';
 import { PulseLoader } from 'react-spinners';
 
@@ -288,6 +288,15 @@ class ListingShow extends React.Component {
                     enableOutsideDays={false}
                     isOutsideRange={date => this.isOutside(date)}
                   />
+              </div>
+
+                <div className='line-space-container'>
+                  <div className='line-space' />
+                </div>
+              
+              <div className='map-details-header'>The neighborhood</div>
+              <div className='display-map-container'>
+                <ShowMap listing={listing} />
               </div>
             </div>
           </div>

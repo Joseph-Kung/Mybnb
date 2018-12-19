@@ -133,7 +133,7 @@
 }
 
 .line-space-container {
-  padding: 25px 0px;
+  padding: 27px 0px;
 }
 
 .show-page-info-header {
@@ -170,7 +170,7 @@
 }
 
 .booking-rating {
-  color: #008489;
+  color: #008483;
   font-size: 8px;
 }
 
@@ -302,4 +302,9 @@
 
 .booking-spinner-container {
   padding-bottom: 50px;
+}
+
+#show-map-container {
+  width: 100%;
+  height: 500px;
 }

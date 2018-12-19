@@ -6,6 +6,7 @@ import { updateFilter } from '../../actions/filters/filter_actions';
 const mapStateToProps = state => ({
   listings: Object.values(state.entities.listings),
   loading: state.ui.loading,
+  bounds: Object.values(state.ui.filters.bounds),
 });
 
 const mapDispatchToProps = dispatch => ({

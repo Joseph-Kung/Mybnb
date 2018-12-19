@@ -36,6 +36,12 @@ class ListingShow extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.listingId != prevProps.match.params.listingId) {
+      this.props.fetchListing(this.props.match.params.listingId);
+    }
+  }
+
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
     this.props.fetchListingBookings(this.props.match.params.listingId);

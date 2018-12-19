@@ -51,6 +51,14 @@ class SearchBar extends React.Component {
 
 
   render(){
+    if (this.props.location.pathname === '/') {
+      return (
+      <div className='landing-search-bar'>
+        <i className="fas fa-search"></i>
+        <input type="text" id='search-bar' className='landing-search-bar-input' placeholder={"Try \"San Francisco\""} />
+      </div>
+      )
+    }
     return (
     <div className='search-bar'>
       <i className="fas fa-search"></i>

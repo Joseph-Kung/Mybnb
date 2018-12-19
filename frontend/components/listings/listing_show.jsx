@@ -30,7 +30,7 @@ class ListingShow extends React.Component {
                           num_guests: this.state.numGuests,
                           start_date: this.state.startDate.format('DD/MM/YYYY'),
         end_date: this.state.endDate.format('DD/MM/YYYY')
-      })
+      }).then(() => this.props.history.push(`/profile/${this.props.currentUserId}`))
     } else {
       this.props.openModal()
     }
@@ -45,11 +45,6 @@ class ListingShow extends React.Component {
     this.props.clearErrors();
   }
 
-  componentDidUpdate (prevProps) {
-    if (this.props.bookings.length > prevProps.bookings.length) {
-      this.props.history.push(`/profile/${this.props.currentUserId}`)
-    }
-  }
 
   renderButton () {
     if (this.props.bookingLoading === true) {

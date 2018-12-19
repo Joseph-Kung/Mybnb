@@ -26,25 +26,47 @@ class NavBar extends React.Component {
   }
 
   renderLoggedOut () {
-    return (
-    <div className='nav-bar-container'>
-      <div className='left-nav-bar'>
-        <div>
-          <Link to='/listings' className='logo'><div className='logo'></div></Link>
+    if (this.props.match.path === '/search') {
+      return (
+        <div className='nav-bar-container-fixed'>
+          <div className='left-nav-bar'>
+            <div>
+              <Link to='/listings' className='logo'><div className='logo'></div></Link>
+            </div>
+            <div className='search-bar'>
+              <i className="fas fa-search"></i>
+              <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
+            </div>
+          </div>
+          <div className='links-container'>
+            <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
+            <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+            {this.props.loginButton}
+            {this.props.signupButton}
+          </div>
         </div>
-        <div className='search-bar'>
-          <i className="fas fa-search"></i>
-          <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
+      )
+    } else {
+      return (
+      <div className='nav-bar-container'>
+        <div className='left-nav-bar'>
+          <div>
+            <Link to='/listings' className='logo'><div className='logo'></div></Link>
+          </div>
+          <div className='search-bar'>
+            <i className="fas fa-search"></i>
+            <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
+          </div>
+        </div>
+        <div className='links-container'>
+          <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
+          <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+          {this.props.loginButton}
+          {this.props.signupButton}
         </div>
       </div>
-      <div className='links-container'>
-        <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
-        <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
-        {this.props.loginButton}
-        {this.props.signupButton}
-      </div>
-    </div>
-    )
+      )
+    }
   }
 
   renderUserShowPage() {
@@ -60,40 +82,77 @@ class NavBar extends React.Component {
   }
 
   renderLoggedIn () {
-    return (
-    <div className='nav-bar-container'>
-      <div className='left-nav-bar'>
-        <div>
-          <Link to='/listings' className='logo'><div className='logo'></div></Link>
-        </div>
-        <div className='search-bar'>
-          <i className="fas fa-search"></i>
-          <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
-        </div>
-      </div>
-      <div className='links-container'>
-        <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
-        <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
-        <div className='nav-bar-profile' onClick={this.showDropdown}>
-          <div className='profile-pic-container' onClick={this.showDropdown}>
-            {this.renderProfilePic()}
+    if (this.props.match.path === '/search') {
+      return (
+        <div className='nav-bar-container-fixed'>
+          <div className='left-nav-bar'>
+            <div>
+              <Link to='/listings' className='logo'><div className='logo'></div></Link>
+            </div>
+            <div className='search-bar'>
+              <i className="fas fa-search"></i>
+              <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
+            </div>
+          </div>
+          <div className='links-container'>
+            <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
+            <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+            <div className='nav-bar-profile' onClick={this.showDropdown}>
+              <div className='profile-pic-container' onClick={this.showDropdown}>
+                {this.renderProfilePic()}
 
-            {
-              this.state.showDropdown === true ? (
-              <div className='dropdown'>
-                <ul>
-                  <Link to={`/profile/${this.props.currentUser.id}`}><li className='dropdown-item'><button className='dropdown-button'>Trips</button></li></Link>
-                  <li className='dropdown-item'><button className='dropdown-button-last' onClick={this.props.logout}>Log out</button></li>
-                </ul>
+                {
+                  this.state.showDropdown === true ? (
+                    <div className='dropdown'>
+                      <ul>
+                        <Link to={`/profile/${this.props.currentUser.id}`}><li className='dropdown-item'><button className='dropdown-button'>Trips</button></li></Link>
+                        <li className='dropdown-item'><button className='dropdown-button-last' onClick={this.props.logout}>Log out</button></li>
+                      </ul>
+                    </div>
+                  ) : null
+                }
+
               </div>
-              ) : null
-            }
-            
+            </div>
+          </div>
+        </div>
+      )
+    }  else {
+      return (
+      <div className='nav-bar-container'>
+        <div className='left-nav-bar'>
+          <div>
+            <Link to='/listings' className='logo'><div className='logo'></div></Link>
+          </div>
+          <div className='search-bar'>
+            <i className="fas fa-search"></i>
+            <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
+          </div>
+        </div>
+        <div className='links-container'>
+          <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
+          <a className='link-button' href="https://github.com/Joseph-Kung"><div className='github'></div></a>
+          <div className='nav-bar-profile' onClick={this.showDropdown}>
+            <div className='profile-pic-container' onClick={this.showDropdown}>
+              {this.renderProfilePic()}
+  
+              {
+                this.state.showDropdown === true ? (
+                <div className='dropdown'>
+                  <ul>
+                    <Link to={`/profile/${this.props.currentUser.id}`}><li className='dropdown-item'><button className='dropdown-button'>Trips</button></li></Link>
+                    <li className='dropdown-item'><button className='dropdown-button-last' onClick={this.props.logout}>Log out</button></li>
+                  </ul>
+                </div>
+                ) : null
+              }
+              
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    )
+      )
+    }
   }
 
   render () {

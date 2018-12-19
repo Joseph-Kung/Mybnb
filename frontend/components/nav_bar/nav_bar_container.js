@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/sessions/session_actions';
 import NavBar from './nav_bar';
 import { openModal } from '../../actions/modal/modal_actions'; 
+import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.entities.users[state.session.currentUserId],
 });
 
@@ -14,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
   signupButton: <button className='nav-bar-button' onClick={() => dispatch(openModal('Log in'))}>Log in</button>,
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));

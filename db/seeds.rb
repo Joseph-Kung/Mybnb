@@ -408,9 +408,87 @@ Located in Manhattan's classiest neighborhood. Shopping of Madison and 5th Avenu
   kitchen: true
 })
 
+lst13 = Listing.create!({
+  owner_id: 6,
+  title: '5min walk/BART. Private entry, bath & kitchenette.',
+  address: '1578 22nd Ave',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94112,
+  latitude: 37.758290,
+  longitude: -122.479874,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 60,
+  description: "The suite is located on the first floor of our home and although there are no common spaces, you may hear us moving about from time to time both upstairs and downstairs. We limit our time downstairs and try to be mindful of noise downstairs while guests are here but we can sometimes be heard going in and out of the back door and up and down the stairs, accessing other rooms, opening closets. Not high traffic, but you'll hear us occasionally.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst14 = Listing.create!({
+  owner_id: 6,
+  title: 'Ocean View Malibu Hideaway.',
+  address: '6003 Zumirez Dr',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90265,
+  latitude: 34.029040,
+  longitude: -118.795560,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 225,
+  description: "A delightful experience often compared with the French Riviera, incredible ocean views. Conveniently located only 23 miles from Los Angeles International Airport (LAX), 15 minutes from Santa Monica, seconds from gorgeous beaches and mountain hikes. If this space is not available for your dates or you need more room we have another super cool larger loft apartment see our profile for the other listing. ",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: false,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst15 = Listing.create!({
+  owner_id: 4,
+  title: 'ENTIRE Floor,PRIVATE Bath&Entrance! SUPERHOST :))',
+  address: '2634 Frederick Douglass Blvd',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10030,
+  latitude: 40.819370,
+  longitude: -73.944460,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 3,
+  price: 54,
+  description: "If you’re looking to get the true NYC experience but don’t want to pay Manhattan prices, but still want to stay close to Manhattan, you’ve found the perfect (Website hidden by Airbnb) only 3 min walking from subway :) Entire spacious floor , clean and reasonably priced, our status as a Super Host allows you to vacation here in confidence. Read on below the rave reviews from people who’ve stayed here before. This one bedroom basement apartment with Private bathroom is more than just a place to sleep.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
 
 
-LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12]
+
+LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15]
 
 LISTINGS.each.with_index do |lst, idx1|
     (1..5).each do |idx2|

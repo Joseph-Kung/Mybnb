@@ -25,11 +25,15 @@ export default class MarkerManager {
   createMarkerFromBench(listing) {
     this.markers[listing.id] = new google.maps.Marker({
       position: { lat: listing.latitude, lng: listing.longitude },
-      label: `$${listing.price}`,
+      label: {
+        text: `$${listing.price}`,
+        fontWeight: 'bold',
+        fontSize: '14px',
+      },
       icon: {
         path: 'M22-48h-44v43h16l6 5 6-5h16z',
         fillColor: 'white',
-        scale: 0.8,
+        scale: 0.85,
         fillOpacity: 1,
         labelOrigin: new google.maps.Point(-1, -25),
         strokeColor: 'gray',

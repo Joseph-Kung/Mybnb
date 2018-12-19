@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ListingIndexItemSlider from './listing-slider';
 import Carousel from 'nuka-carousel';
 
 const ListingIndexItem = ({listing, fetchListing}) => {

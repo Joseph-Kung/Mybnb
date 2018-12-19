@@ -6,8 +6,9 @@ import 'react-dates/lib/css/_datepicker.css';
 import LargePictures from '../pictures/large_pictures';
 import SmallPictures from '../pictures/small_pictures';
 import BookingFormContainer from '../booking/booking_form_container';
-import PulseLoader from '../dot_loader';
+// import PulseLoader from '../dot_loader';
 import { runInThisContext } from 'vm';
+import { PulseLoader } from 'react-spinners';
 
 class ListingShow extends React.Component {
   constructor (props) {
@@ -57,7 +58,10 @@ class ListingShow extends React.Component {
       return (
         <div className='booking-spinner-container'>
           <div className='booking-spinner-body'>
-            <PulseLoader loading={this.props.bookingLoading} />
+            <PulseLoader 
+            size={5} 
+            color={'#008489'}
+            loading={this.props.bookingLoading} />
           </div>
         </div>
       )
@@ -102,7 +106,10 @@ class ListingShow extends React.Component {
         </header>
         <div className='spinner-container'>
           <div className='spinner-body'>
-            <PulseLoader loading={this.props.loading} />
+              <PulseLoader
+                size={15}
+                color={'#008489'}
+                loading={this.props.loading} />
           </div>
         </div>
         </>

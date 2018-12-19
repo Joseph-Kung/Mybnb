@@ -6,6 +6,7 @@ import { openModal } from '../../actions/modal/modal_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.entities.users[state.session.currentUserId],
+  loading: state.ui.loading
 });
 
 const mapDispatchToProps = dispatch => ({

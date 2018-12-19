@@ -1,6 +1,7 @@
 export default class MarkerManager {
-  constructor(map) {
+  constructor(map, handleClick) {
     this.map = map;
+    this.handleClick = handleClick;
     this.markers = {};
   }
 
@@ -40,6 +41,8 @@ export default class MarkerManager {
       },
       listingId: listing.id,
     });
+
+    this.markers[listing.id].addListener('click', () => this.handleClick(listing));
 
     this.markers[listing.id].setMap(this.map);
   }

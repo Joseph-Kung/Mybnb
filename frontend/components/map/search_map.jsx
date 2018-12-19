@@ -13,6 +13,10 @@ class SearchMap extends React.Component {
     this.resetMap();
   }
 
+  handleMarkerClick(listing) {
+    this.props.history.push(`listings/${listing.id}`)
+  }
+
   resetMap() {
     let coordinates;
     if (this.props.location.search) {
@@ -28,7 +32,7 @@ class SearchMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.idleListener();
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     this.MarkerManager.updateMarkers(this.props.listings)
   }
 

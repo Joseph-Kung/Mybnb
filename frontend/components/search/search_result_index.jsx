@@ -9,7 +9,6 @@ class SearchResultIndex extends React.Component {
     super(props);
   }
 
-
   render() {
 
     const listings = this.props.listings.map(listing => <ListingIndexItem key={listing.id} listing={listing}/>)
@@ -28,6 +27,7 @@ class SearchResultIndex extends React.Component {
 
       return listings
     }
+
     return(
       <>
         <header>

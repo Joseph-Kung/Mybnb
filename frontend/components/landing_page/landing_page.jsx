@@ -7,7 +7,7 @@ const LandingPage = (props) => {
     <div className="landing-page-container">
       <LandingNavBarContainer />
       <p className='landing-page-text'>Book your dream adventure here.</p>
-      <SearchBar location={props.location}/>
+      <SearchBar loading={props.loading} location={props.location}/>
     </div>
   )
 };

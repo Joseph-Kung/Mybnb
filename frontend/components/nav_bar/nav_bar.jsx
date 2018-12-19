@@ -122,7 +122,7 @@ class NavBar extends React.Component {
           <div>
             <Link to='/listings' className='logo'><div className='logo'></div></Link>
           </div>
-          <SearchBar />
+          <SearchBar loading={this.props.loading} />
         </div>
         <div className='links-container'>
           <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>

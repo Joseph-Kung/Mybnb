@@ -51,18 +51,36 @@ class SearchBar extends React.Component {
 
 
   render(){
+    if (this.props.loading === true) {
+      if (this.props.location.pathname === '/') {
+        return (
+          <div className='landing-search-bar'>
+            <i className="fas fa-search"></i>
+            <input type="text" id='search-bar' className='landing-search-bar-input' placeholder={`Search`} />
+          </div>
+        )
+      }
+      return (
+        <div className='search-bar'>
+          <i className="fas fa-search"></i>
+          <input type="text" id='search-bar' className='search-bar-input' onChange={this.handleChange} placeholder={`Search`} />
+        </div>
+      )
+    }
+
+    const places = ['San Francisco', 'Los Angeles', 'New York', 'Seattle']
     if (this.props.location.pathname === '/') {
       return (
       <div className='landing-search-bar'>
         <i className="fas fa-search"></i>
-        <input type="text" id='search-bar' className='landing-search-bar-input' placeholder={"Try \"San Francisco\""} />
+        <input type="text" id='search-bar' className='landing-search-bar-input' placeholder={`Try  \"${places[Math.floor(Math.random()*places.length)]}\"`} />
       </div>
       )
     }
     return (
     <div className='search-bar'>
       <i className="fas fa-search"></i>
-      <input type="text" id='search-bar' className='search-bar-input' onChange={this.handleChange} placeholder={"Try \"San Francisco\""} />
+        <input type="text" id='search-bar' className='search-bar-input' onChange={this.handleChange} placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`} />
     </div>
     )
   }

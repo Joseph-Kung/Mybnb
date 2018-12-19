@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
+import SearchBar from './search_bar';
 
 
 class NavBar extends React.Component {
@@ -89,10 +90,7 @@ class NavBar extends React.Component {
             <div>
               <Link to='/listings' className='logo'><div className='logo'></div></Link>
             </div>
-            <div className='search-bar'>
-              <i className="fas fa-search"></i>
-              <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
-            </div>
+            <SearchBar />
           </div>
           <div className='links-container'>
             <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>
@@ -124,10 +122,7 @@ class NavBar extends React.Component {
           <div>
             <Link to='/listings' className='logo'><div className='logo'></div></Link>
           </div>
-          <div className='search-bar'>
-            <i className="fas fa-search"></i>
-            <input type="text" className='search-bar-input' placeholder={"Try \"San Francisco\""} />
-          </div>
+          <SearchBar />
         </div>
         <div className='links-container'>
           <a className='link-button' href="https://www.linkedin.com/in/joseph-kung/"><div className='linkedin'></div></a>

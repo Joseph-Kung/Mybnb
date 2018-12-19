@@ -1,5 +1,7 @@
 import React from 'react';
 import MarkerManager from '../../util/marker_manager';
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 
 class SearchMap extends React.Component {
   constructor(props) {
@@ -7,6 +9,7 @@ class SearchMap extends React.Component {
   }
 
   componentDidMount () {
+    debugger;
     const mapOptions = {
       center: { lat: 37.7758, lng: -122.435 },
       zoom: 13
@@ -42,4 +45,4 @@ class SearchMap extends React.Component {
   }
 }
 
-export default SearchMap;
+export default withRouter(SearchMap);

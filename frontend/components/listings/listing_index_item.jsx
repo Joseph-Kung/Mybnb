@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 
-const ListingIndexItem = ({listing, fetchListing}) => {
+const ListingIndexItem = ({ listing }) => {
   const findType = () => {
     if (listing.privateRoom === true) return 'Private Room';
     return 'Whole House';

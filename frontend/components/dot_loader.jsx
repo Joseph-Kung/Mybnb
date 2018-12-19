@@ -7,6 +7,7 @@ const DotLoading = props => {
     <>
       <PulseLoader
         sizeUnit={"px"}
+        size={15}
         color={'#008489'}
         loading={props.loading}
       />

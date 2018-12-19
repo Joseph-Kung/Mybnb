@@ -295,6 +295,7 @@ class ListingShow extends React.Component {
                 </div>
               
               <div className='map-details-header'>The neighborhood</div>
+              <div className='map-details'>{listing.userName}'s home is located in this {listing.city} neighborhood</div>
               <div className='display-map-container'>
                 <ShowMap listing={listing} />
               </div>

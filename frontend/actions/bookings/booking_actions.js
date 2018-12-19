@@ -36,9 +36,10 @@ export const clearErrors = () => ({
 });
 
 
-export const fetchUserBookings = userId => dispatch => (
-  bookingAPIUtils.fetchUserBookings(userId).then(bookings => dispatch(receiveBookings(bookings)))
-);
+export const fetchUserBookings = userId => (dispatch) => {
+  dispatch(startLoading());
+  return bookingAPIUtils.fetchUserBookings(userId).then(bookings => dispatch(receiveBookings(bookings)));
+};
 
 export const fetchListingBookings = listingId => dispatch => (
   bookingAPIUtils.fetchListingBookings(listingId).then(bookings => dispatch(receiveBookings(bookings)))

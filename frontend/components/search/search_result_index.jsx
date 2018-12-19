@@ -26,7 +26,14 @@ class SearchResultIndex extends React.Component {
     }
 
     if (this.props.listings.length === 0 && this.props.bounds.length > 1) {
-      return <div>Nothing here</div>
+      return(
+        <>
+        <div className='empty-result-container'>
+          <div className='empty-result-header'>No results</div>
+          <div className='empty-result-details'>To get more results, try adjusting your search by moving the map</div>
+        </div>
+        </>
+      )
     } else {
       return listings
     }

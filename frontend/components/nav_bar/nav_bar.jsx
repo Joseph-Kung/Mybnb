@@ -26,6 +26,10 @@ class NavBar extends React.Component {
     document.addEventListener('click', this.closeDropdown)
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('click', this.closeDropdown);
+  }
+
   renderLoggedOut () {
     if (this.props.match.path === '/search') {
       return (

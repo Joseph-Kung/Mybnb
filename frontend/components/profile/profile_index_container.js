@@ -5,6 +5,7 @@ import { fetchUserBookings, deleteBooking } from '../../actions/bookings/booking
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.entities.users[ownProps.match.params.userId],
   bookings: Object.values(state.entities.bookings),
+  loading: state.ui.bookingLoading,
 });
 
 const mapDispatchToProps = dispatch => ({

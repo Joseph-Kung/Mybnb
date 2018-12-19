@@ -6,6 +6,7 @@ import PulseLoader from '../dot_loader';
 class ProfileIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.count = 0
     this.loadBookings = this.loadBookings.bind(this);
   }
 
@@ -14,11 +15,12 @@ class ProfileIndex extends React.Component {
   }
 
   loadBookings () {
+    this.count += 1
     if (this.props.loading === true) {
       return (
         <>
-          <div className='spinner-container-search'>
-            <div className='spinner-body-search'>
+          <div className='spinner-container-show'>
+            <div className='spinner-body'>
               <PulseLoader loading={this.props.loading} />
             </div>
           </div>
@@ -27,7 +29,7 @@ class ProfileIndex extends React.Component {
     }
 
     let bookings = this.props.bookings.map(booking => <ProfileIndexItem key={booking.id} deleteBooking={this.props.deleteBooking} booking={booking} />)
-    if (bookings.length === 0) {
+    if (bookings.length === 0 && this.count > 1) {
       return <h1>Nothing here</h1>
     } else {
       return bookings;
@@ -35,7 +37,6 @@ class ProfileIndex extends React.Component {
   }
 
   render () {
-   
     return(
       <>
         <header>

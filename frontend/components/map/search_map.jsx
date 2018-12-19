@@ -47,6 +47,10 @@ class SearchMap extends React.Component {
     })
   }
 
+  componentWillUnmount() {
+    google.maps.event.clearListeners(this.map, 'idle');
+  }
+
   componentDidUpdate (prevProps) {
     this.MarkerManager.updateMarkers(this.props.listings)
     if (this.props.location.search != prevProps.location.search) {

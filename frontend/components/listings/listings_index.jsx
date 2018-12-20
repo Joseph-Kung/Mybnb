@@ -27,6 +27,7 @@ class ListingsIndex extends React.Component {
     const sf = this.props.sf.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
     const la = this.props.la.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
     const ny = this.props.ny.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
+    const seattle = this.props.seattle.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
     return(
       <>
         <header>
@@ -45,6 +46,10 @@ class ListingsIndex extends React.Component {
           <div><h3 className='where-to-stay'>Homes in New York</h3></div>
           <div className='listings-index-container'>
               {ny}
+          </div>
+          <div><h3 className='where-to-stay'>Homes in Seattle</h3></div>
+          <div className='listings-index-container'>
+              {seattle}
           </div>
         </div>
       </>

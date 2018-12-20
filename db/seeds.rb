@@ -860,9 +860,141 @@ lst28 = Listing.create!({
   kitchen: true
 })
 
+lst29 = Listing.create!({
+  owner_id: 6,
+  title: 'POPULAR CHIC CONDO+PARKING DTLA/ARTDIST/LILTOKYO中文',
+  address: '245 San Pedro St',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90012,
+  latitude: 34.048820,
+  longitude: -118.242072,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 70,
+  description: "Recently updated 1 bedroom/1 bathroom condo with private entrance located close to Little Tokyo/Art District with only less than 10 min walk to the Mariachi Metro Station. It’s only 2 stops to Little Tokyo and 3 stops to Union Station. Take advantage on the convenience that our condo has to offer you.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: false
+})
+
+lst30 = Listing.create!({
+  owner_id: 5,
+  title: 'Stylish Hollywood Loft with Views!',
+  address: '1933 N Highland Ave',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90068,
+  latitude: 34.104930,
+  longitude: -118.339892,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 85,
+  description: "Perfect for a couple, 700 square feet, amazing views, facing west for the sunset every night, gated parking and entry, gym, wood floor, new appliances, and wifi. This is a fully furnished loft, and I live here when I don't rent it, so unlike many other AIRBNB's in Hollywood and LA this has a personal touch!
+
+Right near the 101 if you need to get on the freeway. Right across the street from the new Netflix building (in case you're here working or doing business with them). Head West 5 minutes and you hit the W Hotel (which you can see from the bay of windows, you an also stay there but they charge twice as much for a smaller room!) (metro stop right there as well). Countless bars, restaurants, and clubs are in the same area as well as the Arclight, a great movie theatre, and Amoeba, a famous record store for all your musical needs!",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst31 = Listing.create!({
+  owner_id: 3,
+  title: 'Spacious Studio in Universal City',
+  address: '3297 Tareco Dr',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90068,
+  latitude: 34.128828,
+  longitude: -118.342247,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 48,
+  description: "Modern Studio offers California living at its finest! This unique & private room has new furniture, a deluxe pillow-top mattress, and a private full bathroom. Walking distance to trendy restaurants, bars, shops, LA Fitness, Universal Studios City Walk, & Hollywood. A few miles away from Runyon Canyon, LA Zoo, W.B. Studios. This place is good for couples, solo adventurers, and business travelers.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst32 = Listing.create!({
+  owner_id: 4,
+  title: 'URBAN DOWNTOWN LA POOL TABLE PENTHOUSE SUITE+5BEDS',
+  address: '640 S Grand Ave',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90017,
+  latitude: 34.128828,
+  longitude: -118.342247,
+  num_guests: 6,
+  num_rooms: 2,
+  num_beds: 5,
+  num_bathrooms: 2,
+  price: 185,
+  description: "This 1600 sq. ft. Downtown Los Angeles Super luxury suite is located on the 33rd floor in, 35 story building located in the heart of Downtown LA. This Penthouse rivals any of the local 5 star hotels featuring incredible views of Downtown Los Angeles. This two Bedroom two Bathroom unit is decorated with ultra luxury modern furniture and artwork. This 1600 sq. ft. Downtown Los Angeles Super luxury suite is located on the 33rd floor in, 35 story building located in the heart of Downtown LA. This Penthouse rivals any of the local 5 star hotels featuring incredible views of Downtown Los Angeles. This two Bedroom two Bathroom unit is decorated with ultra luxury modern furniture and artwork. Enjoy breathtaking panoramic views of Downtown Los Angeles from our spacious furnished balcony. Brush up on your pool skills with our high end pool table.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst33 = Listing.create!({
+  owner_id: 5,
+  title: 'Beautiful 2 Bd/2 Ba in Hollywood',
+  address: '6900 Bonita Terrace',
+  city: 'Los Angeles',
+  state: 'CA',
+  zip_code: 90068,
+  latitude: 34.104730,
+  longitude: -118.340318,
+  num_guests: 4,
+  num_rooms: 2,
+  num_beds: 3,
+  num_bathrooms: 2,
+  price: 100,
+  description: "Recently remodeled apartment in Hollywood. Very large open space with modern kitchen and chic furniture. A few blocks to fantastic restaurants, beautiful shops, and all that Hollywood has to offer.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
 
 
-LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28]
+
+LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28, lst29, lst30, lst31, lst32, lst33]
 
 LISTINGS.each.with_index do |lst, idx1|
     (1..5).each do |idx2|

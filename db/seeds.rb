@@ -992,9 +992,201 @@ lst33 = Listing.create!({
   kitchen: true
 })
 
+lst34 = Listing.create!({
+  owner_id: 2,
+  title: 'Private Studio Apartment in Harlem',
+  address: '142 W 133rd St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10030,
+  latitude: 40.813284,
+  longitude: -73.943475,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 100,
+  description: "A newly renovated, clean, modern, private studio apartment in my family's house on a cute block in Harlem. A/C and heating system, free Wifi, a TV with Roku logged into Netflix, fridge, microwave, queen size bed and optional airbed for an extra guest.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: false
+})
+
+lst35 = Listing.create!({
+  owner_id: 3,
+  title: 'Spacious Manhattan Apartment near Central Park',
+  address: '16 W 104th St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10025,
+  latitude: 40.813284,
+  longitude: -73.943475,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 103,
+  description: "The apartment is located just a few steps from Central Park in a charming neighborhood filled with wonderful cafes, bars and restaurants. The flat sits on a very quiet, tree-lined street that's dotted with prewar Beaux-Arts and landmark brownstone buildings.
+
+The three - room flat has air conditioning and includes WiFi and TV. It has a newly renovated kitchen and wonderfully renovated bath in a well-appointed, very clean and quiet apartment with modern decor. The apartment has a full-size bed, hardwood floors, 10-foot high ceilings and plenty of natural light. All utilities, linens, towels etc are included in the price. There are no extra cleaning fees. This is not a share. You will have it to yourself.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst36 = Listing.create!({
+  owner_id: 4,
+  title: 'BEST LOCATION in MANHATTAN !',
+  address: '111 W 88th St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10024,
+  latitude: 40.788288,
+  longitude: -73.971820,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 165,
+  description: "This Manhattan location has it all! It's right at the border of Chelsea, Meatpacking and West Village.
+Chelsea -a center of the New York art world. All the galleries, Chelsea Market, Amazing High Line Park, New York Live Arts and Rubin Museum of Art, flea markets.
+West Village - bohemian neighborhood with celebrity houses, ethnic restaurants, cute bakeries, top bars for spirit and cocktail lovers.
+Meatpacking district - a trendy spot with designers boutiques, Apple store, luxury rooftops, rich club life and fancy hotels. 
+Union Square - National Historic Landmark, famous for its amazing farmer's market, various performers, statues of President George Washington and Mohandas Gandhi, as well as Metronome.
+And don't forget to take your sneakers for a great run at Hudson River Park :)",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst37 = Listing.create!({
+  owner_id: 6,
+  title: 'TriBeCa 2500 Sq Ft w/ Priv Elevator',
+  address: '57 Leonard St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10013,
+  latitude: 40.717994,
+  longitude: -74.006085,
+  num_guests: 12,
+  num_rooms: 3,
+  num_beds: 3,
+  num_bathrooms: 2,
+  price: 350,
+  description: "2500 square feet TriBeCa loft with 13-feet exposed beam ceilings, hardwood floors and over-sized windows. Three bedrooms, two bathrooms, large kitchen, washer/dryer, art, and modern furnishings. We own our building, live on the premises, and are available for assistance at all times. We are in compliance with all local and state rent laws.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst38 = Listing.create!({
+  owner_id: 2,
+  title: 'Most breathtaking view of Manhattan',
+  address: '598 E 88th St',
+  city: 'New York',
+  state: 'NY',
+  zip_code: 10128,
+  latitude: 40.776448,
+  longitude: -73.944545,
+  num_guests: 4,
+  num_rooms: 2,
+  num_beds: 2,
+  num_bathrooms: 2,
+  price: 500,
+  description: "This stunning apartment is located in one of the most desirable locations in NYC at McCarren Park facing the Williamsburg waterfront on the East River enjoying spectacular views of the city spanning from Lower Manhattan all the way up to the Queens Borough Bridge. This contemporary corner apt is covered with knee to ceiling windows, with rich, wide-plank American walnut floors, custom designed kitchen with sub-zero fridge, viking ovens, chrome hardware, marble countertops with pure crystal white backsplash and a host of sleek appliances. Baths are framed by custom tiling, contemporary chrome fixtures and a frameless glass-enclosed shower with rain head and separate soaking tub. It is easy to relax and enjoy this exclusive view from the comfort of the stylish living room when the Empire State Building and Chrysler Building sit right in front of you or while lounging on the terrace. And if you feel like breaking a sweat go downstairs to the gym or outside for a run at McCarren Park or for a swim in the pool at the park as well. Exclusive wi-fi internet, TV Cable and audio system available. Williamsburg is the most trendy neighborhood in NYC with extremely interesting and creative bars and restaurants run by artsy people. For public transit, the Bedford L train station is just five blocks away.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst39 = Listing.create!({
+  owner_id: 4,
+  title: 'Cozy Place in Noe Valley',
+  address: '886 Noe St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94114,
+  latitude: 37.754882,
+  longitude: -122.432306,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 185,
+  description: "One of the best neighborhoods in the city. Centrally located and very authentically SF. Easy commute to Downtown, Castro or Mission. In the center of it all but away from hustle, bustle and noise of the city. Ideal for a single person or a couple. 3rd person can comfortably sleep on a futon bed in the living room.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: false
+})
+
+lst40 = Listing.create!({
+  owner_id: 5,
+  title: 'SoMa Second Home, Garden Suite',
+  address: '298 Cumberland St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94114,
+  latitude: 37.758847,
+  longitude: -122.430197,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 2,
+  price: 240,
+  description: "ADULTS ONLY NOT FAMILY FRIENDLY Thank you for understanding!
+NO children or grandchildren of any age under 18 years old are allowed on the property at any time. Includes infants, NO KIDS of any age!
+NO SMOKERS.
+The Garden Suite is a private studio in my home, with a private entrance and private everything else! You will have your own bathroom/ bedroom/ small coffee bar with fridge, microwave, toaster, and tea kettle. The Suite is all yours!",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
 
 
-LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28, lst29, lst30, lst31, lst32, lst33]
+
+LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28, lst29, lst30, lst31, lst32, lst33, lst34, lst35, lst36, lst37, lst38, lst39, lst40]
 
 LISTINGS.each.with_index do |lst, idx1|
     (1..5).each do |idx2|

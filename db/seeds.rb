@@ -486,9 +486,383 @@ lst15 = Listing.create!({
   kitchen: true
 })
 
+lst16 = Listing.create!({
+  owner_id: 3,
+  title: 'WATERFRONT BAY HOUSE BUNGALOW 15 MIN TO GG BRIDGE',
+  address: '3525 Divisadero St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94123,
+  latitude: 37.792500,
+  longitude: -122.441340,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 99,
+  description: "*SPECIAL $99/NIGHT WEEKDAY PRICING THRU JAN 31ST* 
+FANTASTIC STUDIO BUNGALOW TUCKED AWAY ON A SECLUDED WATERFRONT ENCLAVE! UNIT is ONE LARGE ROOM & SEPARATE BATH. SUPER COMFY ADJUSTABLE QUEEN BED. INCLUDES a COMMON DECK WITH DIRECT ACCESS TO THE BAY. SPECTACULAR VIEWS! ACCOMMODATES A MAX. OF 2 GUESTS, (Sorry, no exceptions). 
+ONLY GUESTS WHO HAVE BOOKED ARE ALLOWED ON THE PROPERTY.
+**NON-SMOKING PROPERTY & NO PETS**
+**IMPORTANT**
+MANY STEPS FROM STREET TO THE PROPERTY & NO DISABLED ACCESS.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst17 = Listing.create!({
+  owner_id: 5,
+  title: 'Garden Retreat steps from Haight St',
+  address: '78 Piedmont St
+San Francisco, CA 94117',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94117,
+  latitude: 37.765440,
+  longitude: -122.445010,
+  num_guests: 3,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 185,
+  description: "One bedroom sanctuary with a beautiful garden view and cozy fireplace. Comes with it's own entrance just steps from bus lines, train and all that Haight Street has to offer. Complete privacy with a separate bedroom, bathroom, and breakfast bar.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst18 = Listing.create!({
+  owner_id: 6,
+  title: 'Mission Dolores Suite',
+  address: '385 Liberty St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94114,
+  latitude: 37.756930,
+  longitude: -122.429810,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 125,
+  description: "Enjoy a luxurious stay in this private 1Bed/1Bath suite in an historic 1912 building. Perfectly located between the Castro and the Mission, walk to all the restaurants, entertainment, shopping, and amenities that these neighborhoods have to offer.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst19 = Listing.create!({
+  owner_id: 4,
+  title: 'Fun & Artsy 2 bdrm 2 ba SF Hidden Gem',
+  address: '585 Hill St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94114,
+  latitude: 37.755090,
+  longitude: -122.433980,
+  num_guests: 4,
+  num_rooms: 2,
+  num_beds: 2,
+  num_bathrooms: 2,
+  price: 145,
+  description: "Located one block from shopping, restaurants. Two blocks from Alamo Square Park and the famous Painted Ladies of San Francisco. Expansive living room with wall mural & high ceiling. Spacious dining area. Fully stocked kitchen. Outdoor prvt patio.",
+  private_room: false,
+  house: true,
+  heater: false,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: false,
+  kitchen: true
+})
+
+lst20 = Listing.create!({
+  owner_id: 5,
+  title: 'Relaxing Victorian room in SoMa, next to BART!',
+  address: '692 Natoma St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip_code: 94103,
+  latitude: 37.781610,
+  longitude: -122.405880,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 59,
+  description: "My classic Victorian house is perfectly located in SoMa! A central neighborhood where the MOSCONE center, Downtown, Civic Center BART, Breweries, Coffee Roasters, Nightclubs & delicious Restaurants are all just 5 - 15mins walking distance, making it the perfect place for either buisness or adventure travelers!
+The house was recently remodeled and it has plenty of natural light. This is a calm and quiet place where you can rest, relax and enjoy my daily aromatherapy :D",
+  private_room: true,
+  house: false,
+  heater: false,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: false,
+  kitchen: true
+})
+
+lst21 = Listing.create!({
+  owner_id: 5,
+  title: 'Historic loft in Pioneer Square',
+  address: '214 S Jackson St',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98104,
+  latitude: 47.599200,
+  longitude: -122.325720,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 125,
+  description: "Located in the heart of historic Pioneer Square, where local coffee shops and award-winning restaurants literally sit below you. Walking distance from Pike Place Market and downtown. Short cab ride to The Space Needle. 5min walk to waterfront and ferry terminal to Bainbridge & Vashon island. Guests 21yrs and up.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst21 = Listing.create!({
+  owner_id: 2,
+  title: 'Pike Place Modern 1Br! Hub to Cruises!',
+  address: '214 S Jackson St',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98104,
+  latitude: 47.599200,
+  longitude: -122.325720,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 125,
+  description: "Located in the heart of historic Pioneer Square, where local coffee shops and award-winning restaurants literally sit below you. Walking distance from Pike Place Market and downtown. Short cab ride to The Space Needle. 5min walk to waterfront and ferry terminal to Bainbridge & Vashon island. Guests 21yrs and up.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst22 = Listing.create!({
+  owner_id: 3,
+  title: 'Pike Place Modern 1Br! Hub to Cruises!',
+  address: '200 Pine St',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98101,
+  latitude: 47.614850,
+  longitude: -122.328890,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 71,
+  description: "My apartment is a couple steps from Pike Place Market, the Gum Wall, and the Waterfront! It is centrally located for my guests to just walk, no need of a car! My listing has all the amenities you need. This is a 1 bedroom apartment with all the amenities you'll need: washer and dryer, dishwasher, heater, wifi.
+
+Located by the water front, it's a hub to cruises!
+Great Sunset view of roof top!",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst23 = Listing.create!({
+  owner_id: 5,
+  title: 'Dog-friendly designer condo with a loft, sky lounge & gym, near downtown!',
+  address: '402 11th Ave',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98122,
+  latitude: 47.605370,
+  longitude: -122.317850,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 2,
+  price: 96,
+  description: "This property is a 923 square feet, 1 Bedroom, 2 bathroom accommodation located in Seattle. Dog-friendly designer condo with a loft, sky lounge & gym, near downtown! offers 1 Sofa bed, 1 Queen bed. It can host 4 people. This accommodation features washer/dryer. Please see the description below or inquire for more details!",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst24 = Listing.create!({
+  owner_id: 6,
+  title: 'Cozy Downtown Loft Near Pike Place and Stadiums',
+  address: '306 Lenora St',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98121,
+  latitude: 47.613510,
+  longitude: -122.341990,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 103,
+  description: "Cozy Pioneer Square Loft within walking distance to Pike Place Market, stadiums, and downtown shopping district. Nice, private outdoor deck with stunning view of downtown and Smith Tower. Easily access the light-rail and bus systems.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst25 = Listing.create!({
+  owner_id: 2,
+  title: 'Downtown/Convention Ctr B&B - Nice!',
+  address: '1501 Belmont Ave',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98122,
+  latitude: 47.616350,
+  longitude: -122.324480,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 2,
+  num_bathrooms: 1,
+  price: 78,
+  description: "Talk about location! First Hill, Downtown and Capitol Hill meet here! 97% walk score, steps to restaurants, bars, shops, theaters, nightlife. 5-minute walk to the Convention Center. Accommodations include kitchenette, WiFi, street parking permit, washer/dryer, store luggage-all free. Reviews speak for themselves. Rates $69 to $219--like hotels, depending on season and special events. Rent this bedroom with private bathroom and not have to deal with the responsibilities of a whole apartment.",
+  private_room: true,
+  house: false,
+  heater: true,
+  pool: false,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst26 = Listing.create!({
+  owner_id: 3,
+  title: 'Spectacular View: Waterfront Condo Near Pike Place',
+  address: '2300 Elliott Ave',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98121,
+  latitude: 47.612460,
+  longitude: -122.348360,
+  num_guests: 4,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 136,
+  description: "Top floor, south facing condo nestled in downtown Seattle across the street from magnificent Puget Sound. Wake up to the smell of seawater, just outside your front door with easy access to Pike Place Market, Seattle Aquarium and miles of waterfront to explore. Views of Mt. Rainier, Puget Sound waters and Seattle skyscrapers from both living room and bed room, with private patio overlooking the ships in Elliot Bay. This condo is close to many attractions and restaurants in downtown Seattle.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst27 = Listing.create!({
+  owner_id: 4,
+  title: 'Spectacular View: Waterfront Condo Near Pike Place',
+  address: '517 Yesler Way',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98104,
+  latitude: 47.601700,
+  longitude: -122.322460,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 70,
+  description: "Right off of Yesler street. This space provides an open view of the city. Sleeps 2 persons on a full bed. Property includes laundry mat and gym. Access to pool table, TV, and vending machine in the common area. Several blocks away there are convenient stores as well as Broadcast Coffee Shop and local bars.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: false,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
+
+lst28 = Listing.create!({
+  owner_id: 4,
+  title: 'Downtown 1BD with Free Parking and WaterView',
+  address: '62 Cedar St',
+  city: 'Seattle',
+  state: 'WA',
+  zip_code: 98121,
+  latitude: 47.614780,
+  longitude: -122.352280,
+  num_guests: 2,
+  num_rooms: 1,
+  num_beds: 1,
+  num_bathrooms: 1,
+  price: 70,
+  description: "A beautiful, spacious and luxury 1BD in Seattle downtown with gorgeous water view, close to shop and entertainment district, Pike Place Market and the waterfront. Enjoy the incredible water and city views on the roof top. Free parking and Queen size bed provided.",
+  private_room: false,
+  house: true,
+  heater: true,
+  pool: true,
+  parking: true,
+  tv: true,
+  wifi: true,
+  air_con: true,
+  kitchen: true
+})
 
 
-LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15]
+
+LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28]
 
 LISTINGS.each.with_index do |lst, idx1|
     (1..5).each do |idx2|

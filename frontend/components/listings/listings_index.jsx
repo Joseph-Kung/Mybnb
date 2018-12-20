@@ -27,8 +27,6 @@ class ListingsIndex extends React.Component {
     const sf = this.props.sf.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
     const la = this.props.la.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
     const ny = this.props.ny.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
-    const tokyo = this.props.tokyo.map(listing => <ListingIndexItem key={listing.id} styling={'listing-item-container-index'}listing={listing} />)
-    const paris = this.props.paris.map(listing => <ListingIndexItem key={listing.id} styling={'listing-itecontainer-index'}listing={listing} />)
     return(
       <>
         <header>

@@ -14,7 +14,7 @@ const App = () => (
     <Modal />
     <Switch>
     <Route path='/listings/:listingId' component={ListingShowContainer} />
-    <Route path='/profile/:userId' component={ProfileIndexContainer} />
+    <AuthRoute path='/profile/:userId' component={ProfileIndexContainer} />
     <Route path='/listings' component={ListingsIndexContainer} />
     <Route path='/search' component={SearchContainer} />
     <Route exact path='/' component={LandingPage} />

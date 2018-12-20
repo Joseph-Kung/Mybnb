@@ -299,6 +299,10 @@ class ListingShow extends React.Component {
               <div className='display-map-container'>
                 <ShowMap listing={listing} />
               </div>
+              
+                <div className='line-space-container'>
+                  <div className='line-space' />
+                </div>
             </div>
           </div>
         </div>

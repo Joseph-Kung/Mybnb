@@ -30,7 +30,12 @@ class ProfileIndex extends React.Component {
 
     let bookings = this.props.bookings.map(booking => <ProfileIndexItem key={booking.id} deleteBooking={this.props.deleteBooking} booking={booking} />)
     if (bookings.length === 0 && this.count > 1) {
-      return <h1>Nothing here</h1>
+      return (
+        <div className='empty-booking-container'>
+          <div className='empty-booking-header'>Choose Your Next Adventure</div>
+          <div className='empty-booking-text'>Book a listing and start your dream vacation today</div>
+        </div>
+      )
     } else {
       return bookings;
     }
@@ -42,7 +47,10 @@ class ProfileIndex extends React.Component {
         <header>
           <NavBarContainer />
         </header>
-          <h2 className='profile-header'>Booked Trips</h2>
+        <h2 className='profile-header'>Booked Trips</h2>
+        <div className='line-space-container'>
+          <div className='profile-line-space' />
+        </div>
         <div className='profile-container'>
           {this.loadBookings()}
         </div>

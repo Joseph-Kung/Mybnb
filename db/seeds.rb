@@ -649,31 +649,6 @@ lst21 = Listing.create!({
   kitchen: true
 })
 
-lst21 = Listing.create!({
-  owner_id: 2,
-  title: 'Pike Place Modern 1Br! Hub to Cruises!',
-  address: '214 S Jackson St',
-  city: 'Seattle',
-  state: 'WA',
-  zip_code: 98104,
-  latitude: 47.599200,
-  longitude: -122.325720,
-  num_guests: 4,
-  num_rooms: 1,
-  num_beds: 2,
-  num_bathrooms: 1,
-  price: 125,
-  description: "Located in the heart of historic Pioneer Square, where local coffee shops and award-winning restaurants literally sit below you. Walking distance from Pike Place Market and downtown. Short cab ride to The Space Needle. 5min walk to waterfront and ferry terminal to Bainbridge & Vashon island. Guests 21yrs and up.",
-  private_room: true,
-  house: false,
-  heater: true,
-  pool: false,
-  parking: false,
-  tv: true,
-  wifi: true,
-  air_con: true,
-  kitchen: true
-})
 
 lst22 = Listing.create!({
   owner_id: 3,
@@ -947,8 +922,8 @@ lst32 = Listing.create!({
   city: 'Los Angeles',
   state: 'CA',
   zip_code: 90017,
-  latitude: 34.128828,
-  longitude: -118.342247,
+  latitude: 34.047775,
+  longitude: -118.256027,
   num_guests: 6,
   num_rooms: 2,
   num_beds: 5,
@@ -973,8 +948,8 @@ lst33 = Listing.create!({
   city: 'Los Angeles',
   state: 'CA',
   zip_code: 90068,
-  latitude: 34.104730,
-  longitude: -118.340318,
+  latitude: 34.103874,
+  longitude: -118.345118,
   num_guests: 4,
   num_rooms: 2,
   num_beds: 3,
@@ -1183,7 +1158,6 @@ The Garden Suite is a private studio in my home, with a private entrance and pri
   air_con: true,
   kitchen: true
 })
-
 
 
 LISTINGS = [lst1, lst2, lst3, lst4, lst5, lst6, lst7, lst8, lst9, lst10, lst11, lst12, lst13, lst14, lst15, lst16, lst17, lst18, lst19, lst20, lst21, lst22, lst23, lst24, lst25, lst26, lst27, lst28, lst29, lst30, lst31, lst32, lst33, lst34, lst35, lst36, lst37, lst38, lst39, lst40]

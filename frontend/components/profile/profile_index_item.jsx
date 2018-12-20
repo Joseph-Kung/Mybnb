@@ -44,7 +44,7 @@ class ProfileIndexItem extends React.Component {
           <div className='booking-line-space' />
         </div>
         <div className='button-container'>
-          <button className='delete-booking' onClick={this.handleSubmit}>Delete Booking</button>
+          <button className='delete-booking' onClick={this.handleSubmit}>Cancel Booking</button>
         </div>
       </div>
     )

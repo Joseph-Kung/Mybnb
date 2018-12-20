@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 
-const ListingIndexItem = ({ listing }) => {
+const ListingIndexItem = ({ listing, styling }) => {
   const findType = () => {
     if (listing.privateRoom === true) return 'Private Room';
     return 'Whole House';
@@ -28,7 +28,7 @@ const ListingIndexItem = ({ listing }) => {
   const rating = <><i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i> <i className="fas fa-star"></i></>
   return (
     <>
-    <div className='listing-item-container'>
+    <div className={styling}>
       <Link to={`/listings/${listing.id}`}>
             <div className='photo-container'>
             {slider()}

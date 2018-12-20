@@ -61,18 +61,27 @@
   font-weight: normal;
 }
 
-@media only screen and (max-width: 816px) {
+@media only screen and (max-width: 1500px) {
+  .listing-item-container {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
   .large-map-container {
     position: static;
-    width: 100%;
+    width: 80%;
   }
 
   .search-result-container {
     flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
   }
 
   .results-container {
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
   }
 }

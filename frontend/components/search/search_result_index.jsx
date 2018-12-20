@@ -10,9 +10,8 @@ class SearchResultIndex extends React.Component {
     this.loadListings = this.loadListings.bind(this);
   }
 
-
   loadListings () {
-    const listings = this.props.listings.map(listing => <ListingIndexItem key={listing.id} listing={listing}/>)
+    const listings = this.props.listings.map(listing => <ListingIndexItem styling={'listing-item-container'} key={listing.id} listing={listing}/>)
     if (this.props.loading === true) {
       return (
         <>

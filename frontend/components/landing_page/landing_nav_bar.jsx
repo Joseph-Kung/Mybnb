@@ -30,7 +30,7 @@ class LandingNavBar extends React.Component {
       <div className='landing-nav-bar-container'>
         <div className='landing-left-nav-bar'>
           <div>
-            <Link to='/listings' className='logo'><div className='logo'></div></Link>
+            <Link to='/listings' className='logo-white'><div className='logo-white'></div></Link>
           </div>
         </div>
         <div className='landing-links-container'>

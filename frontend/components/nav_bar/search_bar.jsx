@@ -27,11 +27,7 @@ class SearchBar extends React.Component {
       }
     })
   }
-
-  handleChange(e) {
-    this.setState({address: e.target.value})
-  }
-
+  
   handleSubmit() {
     let lat;
     let lng;
@@ -48,8 +44,11 @@ class SearchBar extends React.Component {
       }
     })
   }
-
-
+  
+  handleChange(e) {
+    this.setState({address: e.target.value})
+  }
+  
 
 
   render(){

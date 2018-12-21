@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  validates :body, :num_stars
+  validates :body, :num_stars, presence: true
 
   belongs_to :listing,
     foreign_key: :listing_id,

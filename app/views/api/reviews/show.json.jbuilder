@@ -1,0 +1,1 @@
+json.extract! @review, :listing_id, :user_id, :body, :num_stars

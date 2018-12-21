@@ -16,6 +16,10 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
+  has_many :reviews,
+    foreign_key: :user_id,
+    class_name: :Review
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

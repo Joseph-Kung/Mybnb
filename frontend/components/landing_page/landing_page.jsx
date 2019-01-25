@@ -22,7 +22,7 @@ class LandingPage extends React.Component {
       <div>
         <div><h3 className='where-to-stay'>Featured Listings</h3></div>
         <div className='listings-index-container'>
-          {listings }
+          {listings}
         </div>
       </div>
       </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import LandingPage from './landing_page/landing_page';
+import LandingPageContainer from './landing_page/landing_page_container';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import ListingsIndexContainer from './listings/listings_index_container';
@@ -17,7 +17,7 @@ const App = () => (
     <AuthRoute path='/profile/:userId' component={ProfileIndexContainer} />
     <Route path='/listings' component={ListingsIndexContainer} />
     <Route path='/search' component={SearchContainer} />
-    <Route exact path='/' component={LandingPage} />
+    <Route exact path='/' component={LandingPageContainer} />
     <Redirect to='/' />
     </Switch>
   </div>

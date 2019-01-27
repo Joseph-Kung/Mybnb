@@ -7,9 +7,9 @@
   line-height: 16px;
 }
 
-.pictures-container:hover {
-  filter: brightness(80%);
-}
+// .pictures-container:hover {
+//   filter: brightness(80%);
+// }
 
 .large-pic {
   width: 100%;
@@ -19,7 +19,7 @@
 
 .large-pic:hover {
   transform: scale(1.05);
-  filter: brightness(110%);
+  // filter: brightness(110%);
 }
 
 .small-pic {

@@ -19,7 +19,7 @@ class LandingPage extends React.Component {
         <p className='landing-page-text'>Book your dream adventure here.</p>
         <SearchBar loading={this.props.loading} location={this.props.location}/>
       </div>
-      <div>
+      <div className='landing-page-listings'>
         <div><h3 className='where-to-stay'>Featured Listings</h3></div>
         <div className='listings-index-container'>
           {listings}
